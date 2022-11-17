@@ -19,7 +19,6 @@
     "paths": {
       "@backbase/business/update-plugin": ["libs/plugins/business/update-plugin/src/index.ts"],
       "@backbase/components": ["libs/components/src/index.ts"],
-      "@backbase/font-loader": ["libs/font-loader/src/index.ts"],
       "@backbase/retail-e2e": ["libs/retail-e2e/src/index.ts"],
       "@backbase/retail/feature/communication": ["libs/retail/feature/communication/src/index.ts"],
       "@backbase/retail/feature/layout": ["libs/retail/feature/layout/src/index.ts"],
