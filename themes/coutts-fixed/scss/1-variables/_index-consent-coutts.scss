@@ -1,0 +1,7 @@
+@import "util/index";
+@import "brand-consent/index";
+@import "brand-consent-extended/index";
+@import "state/index";
+@import "brand-consent-components/index";
+// Import variables from default theme
+@import "~@backbase/ui-ang/scss/1-variables/variables";

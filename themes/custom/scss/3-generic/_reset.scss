@@ -1,0 +1,26 @@
+// Global annotations
+////
+/// General reset rules
+/// @group generic
+/// @access private
+////
+
+@import "~bootstrap/scss/reboot";
+
+input::-ms-clear {
+  display: none;
+}
+
+// Body
+//
+
+body {
+  text-align: start; // 3
+}
+//
+// Typography
+//
+
+dd {
+  margin-inline-start: 0; // Undo browser default
+}

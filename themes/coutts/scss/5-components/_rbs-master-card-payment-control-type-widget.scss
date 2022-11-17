@@ -1,0 +1,66 @@
+.rbs-control-type-section {
+  margin-bottom: 32px;
+  border: 1px solid $rbs-color-neutral-grey;
+  background: $rbs-color-neutral-white;
+  padding: 32px;
+}
+
+.rbs-control-type-selection-header {
+  font-family: $font-family-heading;
+  font-weight: 300;
+  min-width: 100%;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.rbs-control-type-section-header {
+  @extend .rbs-control-type-selection-header;
+  text-transform: uppercase;
+}
+
+.rbs-control-type-details {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: $h6-font-size;
+  letter-spacing: 0.17px;
+  line-height: $h6-font-size;
+  color: #111112;
+  margin-left: 35px;
+}
+
+.rbs-displayed-control-type-details {
+  @extend .rbs-control-type-details;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+.rbs-control-type-selector {
+  display: initial;
+  float: right;
+
+  .bb-switch__element--checked {
+    background-color: #22bd05;
+  }
+}
+
+.rbs-control-type-section-item {
+  margin-top: 20px;
+}
+
+.turned-off-control {
+  background: url("../../assets/icons/cross.svg") no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.turned-on-control {
+  background: url("../../assets/icons/tick.svg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,95 @@
+.rbs-consent-details-header__status-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rbs-consent_header-tpp-name {
+  display: flex;
+  align-items: center;
+  flex: 0 0 23%;
+}
+
+.rbs-consent_header-valid-on {
+  flex: 0 0 35%;
+}
+
+.rbs-consent_header-authorised-on {
+  flex: 0 0 25%;
+  text-align: right;
+  margin-left: 1rem;
+}
+
+.rbs-consent_header_revoke--button {
+  margin: 1rem 0 1rem 2rem;
+}
+
+.bb-consent-details__lg-wrapper {
+  border: none !important;
+}
+
+.rbs-consent-details-header {
+  display: none;
+}
+
+.rbs-card-section {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1.5rem;
+}
+
+.rbs-consent-details__show-more {
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  justify-content: flex-end;
+  border-top: 1px solid $rbs-color-light-grey;
+  margin: 0 2rem;
+  button {
+    margin: 0;
+    padding-right: 3rem;
+  }
+}
+
+.rbs-consent-request__permission--label {
+  font-weight: $font-face-weight-bold;
+}
+
+rbs-consent-permissions .bb-consent-request__account-information {
+  font-weight: $font-weight-light;
+  color: $rbs-default-grey-color !important;
+}
+
+.rbs-consent-request__general--label {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: $screen-s) {
+  .rbs-consent-details-header--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      text-align: center;
+    }
+  }
+}
+@media (min-width: $screen-s) {
+  .rbs-consent-details-header--mobile {
+    display: none;
+  }
+
+  .rbs-consent-details-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.rbs-consent_header-no-cancel {
+  margin-right: 9rem;
+  margin-left: 5rem;
+}

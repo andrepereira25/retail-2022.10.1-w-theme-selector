@@ -1,0 +1,62 @@
+// Global annotations
+////
+/// @group generic
+/// @access private
+////
+
+@font-face {
+  font-weight: 400;
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/materialicons/MaterialIcons-Outlined.woff2") format("woff2");
+  // HACK: outlined font cannot render on IE11, so defaulting to filled icons.  See ATOM-228
+  // url("#{$path-bb-fonts}/materialicons/MaterialIcons-Outlined.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Material Icons";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/materialicons/MaterialIcons-Regular.woff2") format("woff2"),
+    url("#{$path-bb-fonts}/materialicons/MaterialIcons-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: $font-weight-regular;
+  font-family: "Inter";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/Inter/Inter-Regular.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-semi-bold;
+  font-family: "Inter";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/Inter/Inter-SemiBold.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-bold;
+  font-family: "Inter";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/Inter/Inter-Bold.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-regular;
+  font-family: "Inter";
+  font-style: italic;
+  src: url("#{$path-bb-fonts}/Inter/Inter-Italic.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-bold;
+  font-family: "Inter";
+  font-style: italic;
+  src: url("#{$path-bb-fonts}/Inter/Inter-Bold-Italic.woff");
+  font-display: swap;
+}

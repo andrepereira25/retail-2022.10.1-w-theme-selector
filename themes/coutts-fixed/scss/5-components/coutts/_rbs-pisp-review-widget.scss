@@ -1,0 +1,10 @@
+.rbs-pisp-review {
+  button[data-role="confirm-button"]:not([disabled]) {
+    color: #000000;
+  }
+
+  button[color="secondary"]:not([disabled]) {
+    color: #000000;
+    background-color: #ffffff;
+  }
+}

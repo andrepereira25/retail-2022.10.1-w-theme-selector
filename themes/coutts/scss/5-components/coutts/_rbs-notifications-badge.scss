@@ -1,0 +1,163 @@
+bb-notifications-list {
+  .icons {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: $font-size-base;
+  }
+
+  .success {
+    background-image: url("../../../assets/images/notifications-badge/success.svg");
+  }
+
+  .primary {
+    background-image: url("../../../assets/images/notifications-badge/info.svg");
+  }
+
+  .warning {
+    background-image: url("../../../assets/images/notifications-badge/warning.svg");
+  }
+
+  .danger {
+    background-image: url("../../../assets/images/notifications-badge/danger.svg");
+  }
+
+  .bb-notifications-badge-list-item--unread {
+    background: #f7f8f9;
+
+    .bb-notifications-badge-list-item__header::after {
+      background: #0079c9;
+    }
+
+    .bb-notifications-badge-list-item__title {
+      font-weight: 600;
+      color: #000000;
+    }
+  }
+
+  .bb-notifications-badge-widget__all-read-button {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding: 0.5rem 0;
+  }
+
+  .btn:focus,
+  .btn-link-text:focus,
+  .btn-link-text-light:focus,
+  .bb-notifications-badge-list-item:focus {
+    border: 0 !important;
+  }
+
+  .bb-list--flush-lg .bb-list__item::after {
+    margin-left: 1.125rem;
+  }
+
+  .bb-notifications-badge-list-item.bb-notification--flush {
+    padding: 1rem 1.125rem;
+  }
+
+  .text-content-light {
+    font-weight: 300;
+    color: $rbs-color-hint;
+  }
+
+  .rbs-notification {
+    &-date,
+    &-content {
+      font-weight: 300;
+      color: $rbs-color-hint;
+      ul, ol {
+        padding-left: 0;
+        list-style-position: inside;
+      }
+    }
+    &-date {
+      font-size: $font-size-small;
+    }
+    &-date,
+    &-title {
+      margin-bottom: 2px;
+    }
+    &-title {
+      font-weight: 600;
+      color: #000000;
+      font-size: $font-size-big;
+    }
+    &-content {
+      font-size: $font-size-base;
+    }
+    &-mark-btn {
+      padding-left: 0.3rem;
+      color: $rbs-color-primary-darker;
+      &:focus,
+      &:active &:hover {
+        span {
+          text-decoration: none !important;
+        }
+      }
+    }
+    &-back-btn {
+      color: $rbs-color-primary-darker;
+      text-transform: uppercase;
+      font-size: $font-size-base;
+      font-weight: 300;
+      padding: 0.5rem;
+
+      &:focus,
+      &:active &:hover {
+        span {
+          text-decoration: none !important;
+          color: #000000;
+        }
+      }
+
+      &:focus,
+      &:active {
+        outline: 2px solid $rbs-color-primary !important;
+      }
+    }
+    &-card-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid $rbs-color-neutral-grey;
+    }
+  }
+
+  footer.card-footer {
+    margin: 0;
+  }
+
+  .mark-all-as-read-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 12px;
+    margin-right: 7px;
+
+    span {
+      width: 14px;
+      height: 2px;
+      background: $rbs-color-primary-darker;
+      left: -20px;
+
+      b {
+        background: $rbs-color-primary-darker;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        left: -4px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.bb-notifications-badge-widget__list {
+  margin-right: 6px !important;
+  overflow-x: hidden;
+  @include scrollbar;
+}

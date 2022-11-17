@@ -1,0 +1,25 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+$navbar-height: $layout-vertical-topbar-height + 2 * $layout-vertical-lg-topbar-padding !default;
+$heading-height: $heading-widget-padding-block-start + $heading-widget-de-elevated-padding-block-end -
+  $spacer-lg - $tabs-container-tabs-margin !default;
+$heading-and-navbar-height: $navbar-height + $heading-height !default;
+////
+
+@include media-breakpoint-up(lg) {
+  .contact-details-container {
+    border-inline-start: $border;
+  }
+
+  .contact-all-contacts-container {
+    max-height: calc(100vh - #{$heading-and-navbar-height});
+  }
+
+  .contact-details-container,
+  .contact-list-container {
+    overflow: scroll;
+    max-height: inherit;
+  }
+}

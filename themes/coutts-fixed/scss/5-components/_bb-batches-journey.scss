@@ -1,0 +1,14 @@
+bb-batches-journey {
+  bb-batch-heading {
+    display: block;
+    background: $rbs-color-secondary;
+
+    .bb-heading-widget--de-elevated {
+      background-image: none;
+    }
+
+    .bb-heading-widget__heading {
+      color: $color-neutral-white;
+    }
+  }
+}

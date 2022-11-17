@@ -1,0 +1,12 @@
+.ng-select-disabled .ng-arrow-wrapper {
+  display: none;
+}
+
+body .ng-select.ng-select-disabled > .ng-select-container {
+  background-color: $rbs-color-lite-grey;
+  cursor: not-allowed;
+
+  .ng-value-container .ng-value {
+    cursor: not-allowed;
+  }
+}

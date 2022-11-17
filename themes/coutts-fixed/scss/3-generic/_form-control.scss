@@ -1,0 +1,15 @@
+.ng-invalid.ng-touched > textarea.form-control:not(:focus) {
+  border-color: $rbs-color-danger-default;
+}
+
+textarea.form-control,
+.form-control {
+  &:focus {
+    border-width: 2px !important;
+  }
+}
+
+.label--hidden > .label,
+.label--hidden > label {
+  display: none;
+}

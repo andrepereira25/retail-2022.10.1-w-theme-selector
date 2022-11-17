@@ -1,0 +1,26 @@
+.rbs-contact-us {
+  .bb-heading-widget {
+    h1 {
+      text-transform: none;
+    }
+  }
+  .card {
+    padding: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+
+    .title {
+      text-transform: initial;
+    }
+
+    .phone {
+      font-size: 18px;
+      padding: 24px 0;
+    }
+
+    .green {
+      color: $rbs-color-primary-darker;
+      font-weight: 600;
+    }
+  }
+}

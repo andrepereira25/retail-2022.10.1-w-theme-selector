@@ -1,0 +1,6 @@
+<div class="color" [ngClass]="singleRow ? 'd-flex w-100 align-items-center justify-content-between' : ''">
+    <label class="color--label" [ngClass]="singleRow ? 'mr-2 mb-0' : ''" *ngIf="label">{{label}}</label>
+    <div class="color--input d-flex">
+        <input #colorInput type="color" [ngStyle]="{ 'background-color': colorInput.value }" [ngModel]="value" (ngModelChange)="onValueChange($event)" [disabled]="disabled" />
+        <input #textInput type="text" [ngStyle]="{ 'background-color': '#ffffff' }" class="form-control" [ngModel]="value" (ngModelChange)="onValueChange($event)" [disabled]="disabled"/>
+</div>

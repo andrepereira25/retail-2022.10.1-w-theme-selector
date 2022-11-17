@@ -1,0 +1,24 @@
+{
+  "baseUrl": "https://app.dev.ref.live.backbaseservices.com/web/",
+  "baasKey": "X-PRDL-BAAS",
+  "baasToken": "prdl-dev-d8fd6fee-4306-493a-808a-a9a69990ce00",
+  "twilio": {
+    "accountSid": "AC01c7c2f44ffdecece09b7ef2de3a0a6d",
+    "authToken": "23d7809a5237926513fae7525df963c7"
+  },
+  "users": {
+    "userWithSingleContext": {
+      "username": "ref-dev-emily-autotest",
+      "password": "Pass1234",
+      "fullName": "emily-autotest Jones"
+    },
+    "userWithMultipleContexts": {
+      "username": "",
+      "password": "",
+      "fullName": "",
+      "userContext": "",
+      "defaultContext": "",
+      "debitCardHolder": ""
+    }
+  }
+}

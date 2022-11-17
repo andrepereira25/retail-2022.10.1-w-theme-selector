@@ -1,0 +1,27 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+$bb-portfolio-summary-transactions-item-details-px: $spacer * 2.5 !default;
+$bb-portfolio-summary-transactions-item-details-py: $spacer !default;
+$bb-portfolio-summary-transactions-head-desc-width: 300px !default;
+
+.bb-portfolio-summary-transactions__table {
+  & > tbody > tr > td {
+    padding: $spacer;
+
+    &.bb-portfolio-summary-transactions-item__details {
+      padding: $bb-portfolio-summary-transactions-item-details-py
+        $bb-portfolio-summary-transactions-item-details-px;
+    }
+  }
+}
+
+.bb-portfolio-summary-transactions-item {
+  cursor: pointer;
+}
+
+.bb-portfolio-summary-transactions-item__head-description {
+  max-width: $bb-portfolio-summary-transactions-head-desc-width;
+}

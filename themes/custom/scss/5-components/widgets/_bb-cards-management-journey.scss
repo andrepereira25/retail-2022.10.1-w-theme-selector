@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$cards-management-journey-heading-padding-x: 0 !default;
+
+.bb-cards-management-journey__heading {
+  padding-inline: $cards-management-journey-heading-padding-x;
+}

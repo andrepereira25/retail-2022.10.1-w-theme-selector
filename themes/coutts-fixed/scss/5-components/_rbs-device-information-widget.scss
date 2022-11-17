@@ -1,0 +1,10 @@
+bb-device-information-widget {
+  bb-device-list-item-ui {
+    button.dropdown-item[data-role="device-item-remove"] {
+      display: none;
+    }
+    small.bb-text-disabled {
+      color: #000000;
+    }
+  }
+}

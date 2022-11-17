@@ -1,0 +1,42 @@
+/// font-icon-btn-padding
+// $font-icon-btn-padding:
+
+/// icon-scale-sm
+// $icon-scale-sm:
+
+/// icon-scale-lg
+// $icon-scale-lg:
+
+/// icon-scale-xl
+// $icon-scale-xl:
+
+/// icon-scale-xxl
+// $icon-scale-xxl:
+
+/// icon-scale-circle-sm
+// $icon-scale-circle-sm:
+
+/// icon-scale-circle-md
+// $icon-scale-circle-md:
+
+/// Set the contrasting icon color for icons with a background-color
+// $icon-contrast-color:
+
+/// Set the border-radius for square icons as they have a little roundness by default
+// $icon-square-border-radius:
+
+/// font-icon-size
+// $font-icon-size:
+
+/// font-icon-circle-size-sm
+// $font-icon-circle-size-sm:
+
+/// font-icon-circle-size-md
+// $font-icon-circle-size-md:
+
+/// Icon background size
+// $font-icon-background-size:
+
+/// Activates relevant icons to outline variants
+/// when false -- defaults to original icon-map definitions)
+$enable-outlined-icons: false;

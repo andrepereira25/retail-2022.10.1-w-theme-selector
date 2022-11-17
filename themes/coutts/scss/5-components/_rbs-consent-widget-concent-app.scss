@@ -1,0 +1,108 @@
+.rbs-consent-request {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px !important;
+}
+
+.rbs-consent-valid-on {
+  min-height: 3rem;
+  display: flex;
+  padding: 1.5rem;
+}
+
+.bb-account-selector.ng-select-multiple
+  > .ng-select-container
+  .ng-arrow-wrapper
+  .ng-arrow,
+.bb-account-selector.ng-select-single
+  > .ng-select-container
+  .ng-arrow-wrapper
+  .ng-arrow {
+  color: $rbs-color-primary-darker !important;
+}
+
+.rbs-consent-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rbs-consent-error-container {
+  p {
+    width: 20rem;
+  }
+}
+
+bb-account-selector-ui .ng-select.ng-select-single .ng-select-container {
+  height: auto;
+}
+.rbs-charging-option .ng-select.ng-select-single .ng-select-container {
+  height: unset;
+}
+
+.bb-icon-info-outline:before {
+  content: "info_outline";
+}
+
+.rbs-charging-option .bb-account-selector-dropdown__header {
+  display: none;
+}
+
+.rbs-charging-option {
+  .bb-account-selector.ng-select-single > .ng-select-container,
+  .bb-account-selector.ng-select-multiple > .ng-select-container {
+    min-height: 21px;
+  }
+
+  .ng-arrow-wrapper {
+    top: 3px;
+  }
+}
+
+bb-consent-app .bb-account-selector.ng-select-single > .ng-select-container,
+.bb-account-selector.ng-select-multiple > .ng-select-container {
+  box-shadow: none;
+}
+
+.bb-account-selector.ng-select.ng-select-single.ng-select-disabled
+  .ng-select-container:hover {
+  box-shadow: none;
+}
+
+bb-payment-request-account-selector,
+.rbs-charging-option {
+  .bb-account-selector.ng-select.ng-select-single.ng-select-disabled
+    .ng-select-container,
+  .bb-account-selector.ng-select.ng-select-single > .ng-select-container,
+  .bb-account-selector.ng-select.ng-select-single.ng-select-bottom
+    > .ng-select-container {
+    padding: 1rem;
+  }
+}
+
+.bb-account-selector.ng-select-single.ng-select-disabled
+  > .ng-select-container.ng-has-value
+  .ng-value {
+  padding: 0;
+}
+
+.disabled {
+  .card-body,
+  .ng-select > .ng-select-container {
+    background-color: $rbs-color-lite-grey;
+    color: $rbs-color-neutral-dark !important;
+    &.ng-value {
+      color: $rbs-color-neutral-dark !important;
+    }
+  }
+  color: $rbs-color-neutral-dark;
+
+  .indicative-exchange-rate {
+    color: $rbs-color-neutral-darker;
+  }
+}
+
+.divider-bottom {
+  border-bottom: solid 1px $rbs-color-neutral-dark;
+}

@@ -1,0 +1,36 @@
+// Submenu
+.bb-mega-menu__submenu {
+  background-color: $mega-menu-submenu-bg;
+  color: $mega-menu-submenu-color;
+}
+
+// Submenu link
+// These contain styles that are common to all variations of the submenu,
+// specifically the dropdown and the sidebar variants.
+//
+// This will typically be an <a> element.
+.bb-mega-menu__submenu-link {
+
+  // Override the CXP color for <a> elements without href using !important
+  color: $mega-menu-submenu-link-color !important;
+  &:hover,
+  &:focus {
+    background-color: $mega-menu-submenu-link-hover-bg;
+    color: $mega-menu-submenu-link-color;
+  }
+}
+
+.bb-mega-menu__submenu-link:active {
+  background-color: $mega-menu-submenu-link-active-bg;
+  color: $mega-menu-submenu-link-color;
+}
+
+// Submenu variant: a dropdown menu below the menubar
+@mixin mega-menu-dropdown {
+
+  .bb-mega-menu__submenu {
+    background-color: $mega-menu-dropdown-bg;
+    color: $mega-menu-dropdown-bg;
+  }
+}
+

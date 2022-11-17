@@ -1,0 +1,37 @@
+.rbs-transaction-details-modal {
+  display: flex;
+  flex-direction: column;
+  .card {
+    box-shadow: none;
+  }
+  .card-body {
+    padding: 0;
+  }
+  .account-details-header-title{
+    background-color: $rbs-color-neutral-lighter;
+  }
+}
+
+.rbs-transaction-details-modal__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .bb-ellipsis__description--hide {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .rbs-description__toggle-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    color: $rbs-color-primary;
+    cursor: pointer;
+  }
+}

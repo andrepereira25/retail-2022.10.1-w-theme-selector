@@ -1,0 +1,111 @@
+rbs-product-summary-list-widget,
+rbs-portfolio-summary-positions-widget {
+  .card {
+    box-shadow: $rbs-card-box-shadow;
+  }
+
+  .aggregated-total {
+    font-size: $font-size-base * 2;
+  }
+
+  .bb-list__item:last-child {
+    padding-bottom: 0;
+  }
+
+  .bb-list__item:not(.bb-list__item--no-separator) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #dde4e9;
+
+    &:after {
+      border-bottom: 0px;
+    }
+  }
+
+  .performance-value {
+    border-left: solid 4px $color-primary-darker;
+
+    &.gt-0 {
+      border-color: $color-success;
+      color: $color-success;
+      .icon-path {
+        background: url("../../../assets/icons/path-gt0.svg") no-repeat;
+      }
+    }
+
+    &.lt-0 {
+      border-color: $color-danger;
+      color: $color-danger;
+      .icon-path {
+        background: url("../../../assets/icons/path-lt0.svg") no-repeat;
+      }
+    }
+
+    &.eq-0 {
+      border-color: $color-info;
+      color: $color-info;
+      .icon-path {
+        background: url("../../../assets/icons/path-eq0.svg") no-repeat;
+        height: 7px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-s) {
+    .bban-display-block {
+      display: block;
+    }
+  }
+
+  .icon-path {
+    display: inline-block;
+  }
+
+  .crown-balance {
+    background-color: $rbs-pale-pink-color;
+    .image {
+      width: 26px;
+      height: 24px;
+      box-sizing: border-box;
+      background: url("../../../assets/images/product-summary/crown-homepageApp.svg")
+        no-repeat;
+    }
+    .title {
+      text-transform: uppercase;
+    }
+  }
+
+  rbs-manage-notification-product-list-default-item {
+    .rbs-manage-notification-item {
+      &-container {
+        bb-input-checkbox-ui {
+          margin: 0 0.5rem 0.5rem 0;
+          .bb-input-checkbox__content::before {
+            border-radius: 0;
+          }
+        }
+        .arrow-icon__right i {
+          color: $rbs-color-primary-darker;
+        }
+      }
+      &-title {
+        font-size: $font-size-big;
+        margin-bottom: 0.5rem;
+      }
+      &-balance {
+        font-size: 18px;
+      }
+      &-actions {
+        color: #a2a2a2;
+        font-weight: $font-face-weight-light;
+        .active {
+          color: $rbs-color-neutral-darker;
+        }
+      }
+    }
+  }
+}
+
+.welcome-message {
+  text-transform: capitalize;
+}

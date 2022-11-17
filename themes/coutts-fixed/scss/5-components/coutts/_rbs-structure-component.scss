@@ -1,0 +1,161 @@
+.rbs-banner {
+  color: $color-neutral-white;
+  .banner-content {
+    bottom: 0;
+  }
+
+  a {
+    color: $color-neutral-white !important;
+    text-transform: none;
+  }
+  span {
+    color: $color-neutral-white !important;
+  }
+}
+
+.ic_wealth_upselling_investment {
+  background: url("../../../assets/icons/spending.svg") no-repeat;
+  height: 20px;
+  width: 24px;
+}
+
+.ic_wealth_upselling_borrowing {
+  background: url("../../../assets/icons/home.svg") no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+.upselling-title {
+  line-height: 1.5rem;
+}
+
+.no-investments-image {
+  max-width: 133px;
+}
+
+.rbs-banner-no-investments.card {
+  background-color: $color-secondary;
+
+  .no-investments-title {
+    text-transform: none;
+    color: $rbs-color-neutral-white;
+  }
+  a.btn.btn-primary {
+    color: $color-neutral-black;
+  }
+}
+
+rbs-simple-banner,
+rbs-content-simple-banner {
+  .rbs-simple-banner {
+    &-container {
+      color: $color-neutral-white;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      height: 100%;
+      min-height: 210px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &-title {
+      font-size: 1.25rem;
+      a {
+        color: $color-neutral-white !important;
+        text-transform: none;
+      }
+    }
+    &-subtitle {
+      font-weight: $font-face-weight-light;
+      color: $color-neutral-white !important;
+    }
+  }
+}
+
+rbs-landing-banners,
+rbs-content-landing-banners {
+  .rbs-landing-banner {
+    &-container {
+      color: $color-neutral-white;
+      display: flex;
+      align-items: flex-end;
+      padding: 19px 14px;
+      height: 100%;
+      min-height: 210px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &-title {
+      font-size: 1.25rem;
+      a {
+        color: $color-neutral-white !important;
+        text-transform: none;
+      }
+    }
+    &-subtitle {
+      font-weight: $font-face-weight-light;
+      color: $color-neutral-white !important;
+    }
+  }
+}
+
+rbs-discover,
+rbs-content-discover {
+  .rbs-discover-banner {
+    &-container {
+      color: $color-neutral-white;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.5rem;
+      height: 100%;
+      width: 100%;
+      min-height: 283px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &-title {
+      font-size: 1.5rem;
+      a {
+        color: $color-neutral-white !important;
+        text-transform: none;
+      }
+    }
+    &-subtitle {
+      font-weight: $font-face-weight-light;
+      color: $color-neutral-white !important;
+    }
+  }
+}
+
+rbs-article-banners,
+rbs-content-article-banners {
+  .rbs-article-banner {
+    &-container {
+      color: $color-neutral-white;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.5rem;
+      height: 100%;
+      width: 100%;
+      min-height: 208px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &-title {
+      font-size: 1.5rem;
+      a {
+        color: $color-neutral-white !important;
+        text-transform: none;
+      }
+    }
+    &-subtitle {
+      font-weight: $font-face-weight-light;
+      color: $color-neutral-white !important;
+    }
+  }
+}

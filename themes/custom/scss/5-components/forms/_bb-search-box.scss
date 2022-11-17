@@ -1,0 +1,170 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+/// Set the box-shadow for focused search box
+$search-box-focus-box-shadow: $input-focus-box-shadow !default;
+
+/// Set the border for focused search box
+$search-box-focus-border: $input-focus-border !default;
+
+$search-box-small-search-icon-vertical-adjustment: 2px !default;
+
+/// @todo Bootstrap has a nested !important on the hover which overrules this styling
+$search-box-button-hover-color: $color-neutral-darker !default;
+
+.bb-search-box-visible {
+  // @deprecated - use .bb-search-box--has-search
+  &.bb-search-box-search input {
+    padding-inline-start: $search-box-padding-horizontal;
+    border-start-end-radius: $search-box-border-radius;
+    border-end-end-radius: $search-box-border-radius;
+  }
+
+  // @deprecated - use .bb-search-box--has-clear
+  &.bb-search-box-clear input {
+    padding-inline-end: $search-box-padding-horizontal;
+  }
+
+  input {
+    order: 1;
+
+    &[type="search"] {
+      &::-ms-clear,
+      &::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button,
+      &::-webkit-search-results-decoration {
+        -webkit-appearance: none;
+      }
+    }
+
+    &:focus {
+      box-shadow: $search-box-focus-box-shadow;
+    }
+  }
+
+  .input-group-prepend {
+    order: 0;
+  }
+
+  .input-group-append {
+    order: 2;
+  }
+
+  .input-group-prepend button,
+  .input-group-append button {
+    color: $search-box-button-color;
+
+    bb-icon-ui {
+      vertical-align: bottom;
+    }
+
+    &:focus {
+      box-shadow: $search-box-focus-box-shadow;
+    }
+  }
+
+  &:not(.bb-search-box--has-clear) .bb-search-box__input {
+    @include border-inline-end-radius($search-box-border-radius);
+    &.open {
+      @include border-inline-end-radius($search-box-border-radius);
+    }
+  }
+
+  &:not(.bb-search-box--has-search) .bb-search-box__input {
+    @include border-inline-start-radius($search-box-border-radius);
+  }
+}
+
+.bb-search-box--has-search {
+  .bb-search-box__input {
+    padding-left: $search-box-padding-horizontal;
+  }
+
+  .bb-search-box__search-button button {
+    @include border-inline-start-radius($search-box-border-radius);
+    padding-inline: $search-box-button-padding-horizontal;
+
+    &.btn-link:not(:disabled):not(.disabled):hover {
+      color: $search-box-button-hover-color;
+      background: $search-box-button-background-color;
+    }
+
+    &.btn-link:not(:disabled):not(.disabled):focus {
+      color: $search-box-button-hover-color;
+      background: $search-box-button-background-color;
+    }
+
+    &.btn-sm {
+      bb-icon-ui[name="search"] {
+        margin-block-start: -1 * $search-box-small-search-icon-vertical-adjustment;
+      }
+    }
+    &.btn:focus::before {
+      @include border-inline-end-radius(0);
+      inset-inline-end: $search-focus-outline-distance/4;
+    }
+  }
+
+  &.rounded {
+    .bb-search-box__search-button button {
+      @include border-inline-start-radius($border-radius-circle);
+    }
+  }
+}
+
+.bb-search-box--has-clear {
+  .bb-search-box__input {
+    padding-inline-end: $search-box-padding-horizontal;
+  }
+
+  .bb-search-box__clear-button button {
+    @include border-inline-end-radius($search-box-border-radius);
+
+    padding-inline: $search-box-button-padding-horizontal;
+
+    &.btn-link:not(:disabled):not(.disabled):hover {
+      color: $search-box-button-hover-color;
+      background: $search-box-button-background-color;
+    }
+
+    &.btn-link:not(:disabled):not(.disabled):focus {
+      color: $search-box-button-hover-color;
+      background: $search-box-button-background-color;
+    }
+    &.btn:focus::before {
+      @include border-inline-start-radius(0);
+      inset-inline-start: $search-focus-outline-distance/4;
+    }
+  }
+
+  &.rounded {
+    .bb-search-box__clear-button button {
+      @include border-inline-end-radius($border-radius-circle);
+    }
+  }
+}
+
+.bb-search-box__search-button {
+  margin-block-end: 0;
+}
+
+.bb-search-box {
+  &:not(.bb-search-box--has-clear) {
+    .bb-search-box__input {
+      &.open {
+        border-inline-end-width: $input-border-width;
+        @include border-inline-end-radius($input-border-radius);
+      }
+    }
+  }
+}

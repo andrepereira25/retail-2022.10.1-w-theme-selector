@@ -1,0 +1,32 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-service-agreement-close-background-color: $color-secondary-darker !default;
+$bb-service-agreement-text-color: $color-neutral-white !default;
+
+/// Styles for Service Agreement Close Widget
+///
+/// @name bb-service-agreement-close-widget
+///
+/// @example html
+/// <div class="bb-service-agreement-close">
+///   <div class="bb-service-agreement-close__item bb-stack">
+///     <div class="bb-stack__item">
+///       <bb-icon-ui name="times" backgroundType="circle"></bb-icon-ui>
+///     </div>
+///     <div class="bb-stack__item bb-heading-2">
+///       Manage Service Agreement Some Name
+///     </div>
+///   </div>
+/// </div>
+.bb-service-agreement-close {
+  background-color: $bb-service-agreement-close-background-color;
+}
+
+.bb-service-agreement-close__item {
+  padding: $sizer;
+  color: $bb-service-agreement-text-color;
+}

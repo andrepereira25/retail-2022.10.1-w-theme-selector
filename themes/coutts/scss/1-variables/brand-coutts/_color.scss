@@ -1,0 +1,94 @@
+$rbs-color-primary: #22bd05;
+$rbs-color-primary-darker: #178303;
+$rbs-color-secondary: #002245;
+$rbs-color-danger-default: #ba293a;
+$rbs-color-selected-default: #1775cb;
+$rbs-color-info: #1971c2;
+$rbs-color-warning: #f1be3c;
+$rbs-color-neutral-white: #fff;
+$rbs-color-neutral-lightest: #f8fbfe;
+$rbs-color-neutral-lighter: #f1f6fb;
+$rbs-color-neutral-light: #e9eff4;
+$rbs-color-lite-grey: #f5f5f5;
+$rbs-color-neutral-grey: #dde4e9;
+$rbs-color-neutral-greyer: #ccd3d8;
+$rbs-color-neutral-greyest: #b3b8bd;
+$rbs-color-neutral-dark: #8c9194;
+$rbs-color-neutral-darker: #111112;
+$rbs-pending-transactions-color: #55585a;
+$rbs-default-grey-color: #55585a;
+$rbs-color-hint: #737373;
+$rbs-color-light-grey: #6d7278;
+$rbs-pale-pink-color: #fbd9d2;
+$rbs-color-hover-gray: #f2f2f2;
+$rbs-input-btn-focus-box-shadow: 0 0 0 0.2rem rgba(43, 155, 224, 0.25);
+$switch-checked-bg-color: $rbs-color-selected-default;
+
+/// 1 primary/1 default
+$color-primary: $rbs-color-primary;
+$color-primary-darker: $rbs-color-primary-darker;
+
+/// 2 secondary/1 default
+$color-secondary: $rbs-color-secondary;
+
+/// 3 accent/1 default
+// $color-accent:
+
+/// 4 semantic/1 success/1 default
+// $color-success:
+
+/// 4 semantic/2 danger/1 default
+$color-danger: $rbs-color-danger-default;
+
+/// 4 semantic/3 warning/1 defaul
+$color-warning: $rbs-color-warning;
+
+/// 4 semantic/4 info/1 default
+$color-info: $rbs-color-info;
+
+/// 5 neutrals/1 white
+$color-neutral-white: $rbs-color-neutral-white;
+
+/// 5 neutrals/2 lightest
+$color-neutral-lightest: $rbs-color-neutral-lightest;
+
+/// 5 neutrals/3 lighter
+$color-neutral-lighter: $rbs-color-neutral-lighter;
+
+/// 5 neutrals/4 light
+$color-neutral-light: $rbs-color-neutral-light;
+
+/// 5 neutrals/5 grey
+$color-neutral-grey: $rbs-color-neutral-grey;
+
+/// 5 neutrals/6 greyer
+$color-neutral-greyer: $rbs-color-neutral-greyer;
+
+/// 5 neutrals/7 greyest
+$color-neutral-greyest: $rbs-color-neutral-greyest;
+
+/// 5 neutrals/8 dark
+$color-neutral-dark: $rbs-color-neutral-dark;
+
+/// 5 neutrals/9 darker
+$color-neutral-darker: $rbs-color-neutral-darker;
+
+/// 5 neutrals/10 black
+// $color-neutral-black: $rbs-color-neutral-black;
+
+$theme-default-colors: (
+  "primary": $color-primary,
+  "primary-darker": $color-primary-darker,
+  "secondary": $color-secondary,
+  "success": $color-success,
+  "info": $color-info,
+  "warning": $color-warning,
+  "danger": $color-danger,
+  "light": $color-neutral-light,
+  "dark": $color-neutral-darker
+) !default;
+
+$icon-custom-color-list: (
+  "neutral-dark": $color-neutral-dark,
+  "primary-darker": $color-primary-darker
+) !default;

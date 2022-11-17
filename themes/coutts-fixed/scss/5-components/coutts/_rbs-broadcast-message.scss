@@ -1,0 +1,23 @@
+.broadcast-margin-h3 {
+  margin-bottom: 1rem;
+}
+
+.broadcase-modal-header-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.broadcast-modal-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $screen-xs) {
+    flex-direction: column-reverse;
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}

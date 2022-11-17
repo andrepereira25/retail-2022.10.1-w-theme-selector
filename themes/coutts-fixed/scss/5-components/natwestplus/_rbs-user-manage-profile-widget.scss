@@ -1,0 +1,101 @@
+bb-user-manage-profile-widget {
+  .box-shadow {
+    box-shadow: $rbs-card-box-shadow;
+  }
+  .card-section {
+    color: $rbs-default-grey-color;
+    .card-section-info-link {
+      padding-left: 2rem;
+      font-weight: 300;
+    }
+  }
+
+  h1,
+  h2 {
+    font-weight: bold;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h1[data-role="headings"],
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase !important;
+  }
+}
+
+.rbs-phone-number-form {
+  &-control {
+    &-type {
+      width: 336px;
+    }
+    &-code {
+      // width: 100px;
+    }
+    &-number {
+      width: 336px;
+    }
+  }
+
+  p,
+  u {
+    text-decoration: none;
+  }
+}
+
+.rbs-fixed-stack-item-size {
+  width: 200px;
+}
+
+.rbs-row-with-rotated-bagde {
+  position: relative;
+  .rbs-row-height-placeholder {
+    background-color: #e0ece0;
+    width: 1.25rem;
+    position: relative;
+    .rbs-row-height-placeholder-item {
+      height: 21px;
+    }
+  }
+  .rbs-row-badge-wrapper {
+    width: 10px;
+    height: 100%;
+    .rbs-row-bagde__rotated {
+      position: absolute;
+      top: 7px;
+      left: -30px;
+      transform: rotateZ(-90deg);
+      transform-origin: center;
+      &.adress-badge {
+        top: 40%;
+        left: -20px;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: 1;
+        color: #19451c;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        transition: color 0.2s cubic-bezier(0.42, 0, 0.58, 1),
+          background-color 0.2s cubic-bezier(0.42, 0, 0.58, 1),
+          border-color 0.2s cubic-bezier(0.42, 0, 0.58, 1),
+          box-shadow 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+      }
+    }
+  }
+}
+
+.rbs-card-subtitle {
+  padding: 0 2rem 0 2rem;
+  font-weight: 300;
+}
+
+[data-role="user-manage-profile-email-edit-button"] {
+  margin-right: 10px;
+}

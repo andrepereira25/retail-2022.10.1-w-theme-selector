@@ -1,0 +1,77 @@
+.rbs-dropdown-custom {
+
+  .btn,
+  .btn:hover,
+  .btn:not(:disabled):not(.disabled):hover,
+  .btn:focus,
+  .btn:not(:disabled):not(.disabled):focus,
+  .btn:not(:disabled):not(.disabled):active,
+  .btn:not(:disabled):not(.disabled):active:focus,
+  .bb-dropdown-btn-group-wrapper.show > .btn:not(:disabled):not(.disabled):focus,
+  .show > .btn.dropdown-toggle {
+    display: block;
+    width: 100%;
+    height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    font-family: $input-font-family;
+    @include font-size($input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    @include border-radius($input-border-radius, 0);
+    @include box-shadow($input-box-shadow);
+    @include transition($input-transition);
+  }
+
+  .btn:focus,
+  .show > .btn.dropdown-toggle:focus,
+  .btn:not(:disabled):not(.disabled):active:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
+  }
+
+  .btn:disabled {
+    color: $rbs-color-neutral-dark;
+    border-color: $input-border-color;
+    background-color: $rbs-color-neutral-lightest;
+  }
+
+  .dropdown-menu-inner-container {
+    overflow: auto;
+    max-height: none !important;
+  }
+
+  bb-icon-ui {
+    margin-left: auto;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
+
+  .dropdown-item {
+    cursor: pointer;
+
+    &--disabled {
+      cursor: default;
+      opacity: .3;
+      pointer-events: none;
+
+      &:hover,
+      &:focus {
+        background: $input-bg;
+      }
+    }
+  }
+
+  .dropdown-description {
+    font-weight: normal;
+  }
+
+  hr {
+    margin: 0 0 (-$dropdown-item-padding-y) 0;
+  }
+}

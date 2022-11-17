@@ -1,0 +1,122 @@
+.account-amount {
+  white-space: normal;
+  max-width: 150px;
+  text-align: right;
+}
+
+.account-amount-placement {
+  min-height: 42px;
+  display: flex;
+  align-items: flex-end;
+
+  @media (max-width: $screen-s) {
+  }
+}
+
+bb-product-summary-account-selector-widget {
+  .rbs-account-selector__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ng-select-container {
+    .ng-value-container {
+      .ng-value {
+        padding-right: 1rem !important;
+      }
+    }
+  }
+
+  .performance-value {
+    border-left: solid 4px $color-primary-darker;
+
+    &.gt-0 {
+      border-color: $color-success;
+      color: $color-success;
+      .icon-path {
+        background: url("../../../assets/icons/path-gt0.svg") no-repeat;
+      }
+    }
+
+    &.lt-0 {
+      border-color: $color-danger;
+      color: $color-danger;
+      .icon-path {
+        background: url("../../../assets/icons/path-lt0.svg") no-repeat;
+      }
+    }
+
+    &.eq-0 {
+      border-color: $color-info;
+      color: $color-info;
+      .icon-path {
+        background: url("../../../assets/icons/path-eq0.svg") no-repeat;
+        height: 7px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-s) {
+  .account-selector-name {
+    max-width: 200px;
+    white-space: normal;
+  }
+}
+
+bb-account-selector-ui .ng-select.ng-select-single .ng-select-container {
+  height: auto;
+
+  span.ng-arrow-wrapper {
+    .ng-arrow {
+      color: $rbs-color-primary-darker;
+    }
+  }
+  div.ng-placeholder {
+    color: #000000 !important;
+  }
+}
+
+.account-selector-container {
+  span.ng-arrow-wrapper {
+    @media (min-width: $screen-s) {
+      position: absolute;
+      right: 1rem;
+      top: 41%;
+    }
+
+    @media (max-width: $screen-s) {
+      position: absolute;
+      right: 7px;
+      top: 39%;
+    }
+  }
+}
+
+.rbs-ips-child-accounts-list {
+  padding: 20px;
+
+  > div {
+    border-bottom: 1px solid #dde4e9;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  :last-child {
+    border-bottom: none;
+  }
+}
+
+.rbs-trust-account {
+  padding: 20px;
+  font-size: 17px;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.12);
+  font-weight: 300;
+
+  &_title {
+    color: $rbs-color-neutral-darker;
+  }
+  &_action {
+    color: $rbs-color-primary-darker;
+  }
+}

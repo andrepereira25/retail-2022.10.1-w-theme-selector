@@ -1,0 +1,23 @@
+.close-popup {
+  background: url("../../../assets/icons/natwestplus/close.svg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.modal-header {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+    color: $rbs-color-primary;
+  }
+}

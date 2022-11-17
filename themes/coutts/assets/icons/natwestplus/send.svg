@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>DD4C2009-3DB2-4733-8998-193BFDB0EBFB@0.5x</title>
+    <defs>
+        <path d="M12,2 C17.53,2 22,6.47 22,12 C22,17.53 17.53,22 12,22 C6.47,22 2,17.53 2,12 C2,6.47 6.47,2 12,2 Z M7.0052381,7 L7,10.8888889 L14.8571429,12 L7,13.1111111 L7.0052381,17 L18,12 L7.0052381,7 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Mapping-Icons" transform="translate(-213.000000, -485.000000)"></g>
+        <g id="3-Icons/1-Material/Send_Circle">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#5A287D" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

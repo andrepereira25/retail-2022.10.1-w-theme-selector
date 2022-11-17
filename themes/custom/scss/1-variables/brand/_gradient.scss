@@ -1,0 +1,26 @@
+////
+/// Colors (global)
+/// @group 1-variables/brand/gradient
+/// @access public
+////
+
+/* Gradient Angle */
+
+$gradient-angle-1: 0deg !default;
+$gradient-angle-2: 45deg !default;
+$gradient-angle-3: 90deg !default;
+$gradient-angle-4: 135deg !default;
+$gradient-angle-5: 180deg !default;
+$gradient-angle-6: 225deg !default;
+$gradient-angle-7: 270deg !default;
+$gradient-angle-8: 315deg !default;
+
+$design-system-gradient-1: linear-gradient($gradient-angle-5, #23345e 0%, #181e41 100%);
+$design-system-gradient-2: linear-gradient($gradient-angle-5, #00b2d1 0%, #0079c9 100%);
+$design-system-gradient-3: linear-gradient($gradient-angle-5, #00d9d9 0%, #00a1e0 100%);
+$design-system-gradient-4: linear-gradient($gradient-angle-5, #ffac09 0%, #f27d09 100%);
+$design-system-gradient-5: linear-gradient($gradient-angle-5, #f2780c 0%, #e63b0b 100%);
+$design-system-gradient-6: linear-gradient($gradient-angle-5, #c22327 0%, #b8213f 100%);
+$design-system-gradient-7: linear-gradient($gradient-angle-5, #a81e5c 0%, #4907ae 100%);
+$design-system-gradient-8: linear-gradient($gradient-angle-5, #49074e 0%, #2f0642 100%);
+$design-system-gradient-9: linear-gradient($gradient-angle-5, #333333 0%, #1a1a1a 100%);

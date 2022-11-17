@@ -1,0 +1,57 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+$accounts-filter-margin-horizontal: $spacer-xl !default;
+$accounts-filter-margin-horizontal--md: $sizer-lg !default;
+$accounts-filter-margin-horizontal--sm: $sizer-md !default;
+
+/// Accounts filter panel
+///
+/// @example html
+/// <div class="accounts-filter-container">
+/// <div class="accounts-filter__dropdown">
+/// <div class="accounts-filter-dropdown__items"></div>
+/// <div class="accounts-filter-dropdown__items"></div>
+/// </div>
+/// <div class="accounts-filter__dropdown accounts-filter__buttons-panel">
+/// </div>
+/// </div>
+
+@mixin accounts-filter-margins($sizer) {
+  margin: 0 -#{$sizer};
+
+  .accounts-filter__dropdown {
+    padding: $sizer;
+  }
+  .accounts-filter__buttons-panel {
+    padding-top: 0;
+  }
+  .accounts-filter-dropdown__items:not(:last-child) {
+    margin-right: $sizer;
+  }
+}
+
+.accounts-filter-container {
+  @include accounts-filter-margins($accounts-filter-margin-horizontal);
+  background-color: $color-neutral-lighter;
+
+  .accounts-filter-dropdown__items {
+    width: 50%;
+  }
+
+  .bb-dropdown-panel__dropdown {
+    width: 100%;
+  }
+
+  @if $experimental-enable-dynamic-spacing {
+    @include media-breakpoint-down(sm) {
+      @include accounts-filter-margins($accounts-filter-margin-horizontal--md);
+    }
+    @include media-breakpoint-down(xs) {
+      @include accounts-filter-margins($accounts-filter-margin-horizontal--sm);
+    }
+  }
+}

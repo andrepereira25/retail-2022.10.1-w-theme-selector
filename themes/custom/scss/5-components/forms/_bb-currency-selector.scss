@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$currency-selector-dropdown-min-width-wide: 300px !default;
+
+.bb-currency-selector__dropdown {
+  min-width: $currency-selector-dropdown-min-width-wide;
+}

@@ -1,0 +1,46 @@
+rbs-apply-new-products-widget, rbs-new-products-content {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: $font-weight-light !important;
+  h1 {
+    margin-bottom: 20px;
+    text-transform: none;
+  }
+
+  h3 {
+    color: $rbs-default-grey-color;
+    text-transform: none;
+  }
+
+  h4 {
+    text-transform: capitalize;
+    color: $rbs-color-neutral-darker;
+  }
+
+  .sub-title {
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+  .card {
+    box-shadow: $rbs-card-box-shadow;
+    padding: 2rem;
+    margin-top: 2rem;
+
+    button,
+    a {
+      color: $rbs-color-neutral-darker !important;
+      text-transform: uppercase;
+      font-weight: $font-weight-light !important;
+    }
+  }
+
+  p {
+    color: $rbs-default-grey-color;
+    margin-bottom: 0;
+  }
+
+  .bb-button-bar {
+    margin-top: 42px;
+  }
+}

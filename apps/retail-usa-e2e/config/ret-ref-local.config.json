@@ -1,0 +1,24 @@
+{
+  "baseUrl": "http://localhost:4200/",
+  "baasKey": "X-PRDL-BAAS",
+  "baasToken": "prdl-stg-41786aed-ff53-4572-9762-0061e0cd1075",
+  "twilio": {
+    "accountSid": "AC01c7c2f44ffdecece09b7ef2de3a0a6d",
+    "authToken": "23d7809a5237926513fae7525df963c7"
+  },
+  "users": {
+    "userWithSingleContext": {
+      "username": "ref-stg-emily-autotest",
+      "password": "Pass1234",
+      "fullName": "emily-autotest Jones"
+    },
+    "userWithMultipleContexts": {
+      "username": "",
+      "password": "",
+      "fullName": "",
+      "userContext": "",
+      "defaultContext": "",
+      "debitCardHolder": ""
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<div class="app-settings d-flex" [ngClass]="isOpen ? 'open' : 'closed'">
+    <div class="position-relative d-flex">
+        <div class="app-settings--toggle d-flex bg-white" (click)="toggleOpen()">
+            <bb-icon-ui [name]="isOpen ? 'angle-right' : 'angle-left'"></bb-icon-ui>
+            <bb-icon-ui name="settings" class="cranck"></bb-icon-ui>
+        </div>
+        <div class="app-settings--content bg-white">
+            <div class="theming">
+                <h4>Pre-made themes:</h4>
+                <div class="d-flex w-100 justify-content-between">
+                    <bb-input-radio-group-ui
+                        [ngModel]="selectedTheme$ | async"
+                        (ngModelChange)="setTheme($event)"
+                        aria-labelledby="'label-account-type'"
+                        [horizontal]="true"
+                        [preselect]="true"
+                        [required]="true"
+                    >
+                        <bb-input-radio-ui *ngFor="let item of themes" [value]="item" [label]="item.title"></bb-input-radio-ui>
+                        <bb-input-radio-ui [value]="CustomTheme" [label]="CustomTheme.title" ></bb-input-radio-ui>
+                    </bb-input-radio-group-ui>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-3 flex-row-inverse">
+                <input type="checkbox" [(ngModel)]="showColorGraph"/> <h4 class="mb-0 ml-3">Show graph for custom colors</h4>
+            </div>
+            <div class="custom-theming" [formGroup]="customThemeForm">
+                <div class="colors">
+                    <bb-color-picker class="mt-3 d-block" *ngFor="let key of formControlKeys; trackBy: trackByControlName" [label]="key.label" [formControlName]="key.controlName" [disabled]="(selectedTheme$ | async) !== CustomTheme" ></bb-color-picker>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div *ngIf="showColorGraph" class="position-fixed d-flex" [ngStyle]="{'z-index': 1111, 'top': '90px', 'left': 0}">
+    <div class="d-flex">
+        <div>
+            <ng-container *ngFor="let control of controls">
+                <div *ngIf="!control.name.startsWith('neutral')" class="d-flex w-100 px-4 user-select-none" [ngStyle]="{'background-color': control.value }">
+                    <span [ngStyle]="{'background-color': control.value, 'color': control.value, '-webkit-filter': 'invert()', '-webkit-background-clip': 'text' }">
+                        {{control.value}} - {{control.name}}
+                    </span>
+                </div>
+            </ng-container>
+        </div>
+        <div>
+            <ng-container *ngFor="let control of controls">
+                <div *ngIf="control.name.startsWith('neutral')" class="d-flex w-100 px-4 user-select-none" [ngStyle]="{'background-color': control.value }">
+                    <span [ngStyle]="{'background-color': control.value, 'color': control.value, '-webkit-filter': 'invert()', '-webkit-background-clip': 'text' }">
+                        {{control.value}} - {{control.name}}
+                    </span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

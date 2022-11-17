@@ -1,0 +1,39 @@
+.merchant-list-action-icon {
+  padding-right: 5px;
+}
+.merchant-list-header {
+  margin-bottom: 30px;
+}
+.merchant-list-header-icon {
+  position: relative;
+  top: 5px;
+}
+.merchant-row {
+  border-bottom: 1px solid lightgray;
+  overflow-x: hidden;
+}
+.merchant-checkbox {
+  padding-top: 3px;
+}
+.trusted-merchatlist-modal {
+  &__close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  &__close-icon {
+    color: $rbs-color-primary;
+  }
+}
+.merchants-paginator {
+  padding-top: 40px;
+}
+.merchant-list-empty-state {
+  padding-bottom: 32px;
+}
+
+.rbs-merchants-viewport {
+  max-height: 30rem;
+  overflow-y: auto;
+}

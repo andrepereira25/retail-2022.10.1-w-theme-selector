@@ -1,0 +1,7 @@
+.bb-dropdown__icon {
+  color: $rbs-color-primary-darker;
+}
+
+body .dropdown-menu {
+  z-index: $zindex-modal-backdrop + 1;
+}

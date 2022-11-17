@@ -1,0 +1,72 @@
+.amount-regular-color {
+  color: #178303;
+}
+
+.rbs-payment-widget__container {
+  button[data-role="submit-button"]:not([disabled]) {
+    color: #000000;
+  }
+
+  button[color="secondary"]:not([disabled]) {
+    color: #000000;
+    background-color: #ffffff;
+  }
+}
+bb-modal-footer-ui {
+  button[data-role="international-payment-instruction-confirm-button"]:not([disabled]) {
+    color: #000000 !important;
+  }
+}
+
+.rbs-add-payee-button__button-container {
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 5rem;
+  padding-right: 1.5rem;
+  border-bottom: 1px solid $rbs-color-neutral-greyer;
+}
+
+.rbs-payment-confirmation-modal__body {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+bb-payment-template-selector {
+  display: none;
+}
+
+.payment-loading-state {
+  position: absolute;
+  z-index: 9999;
+  top: 45%;
+  right: 48%;
+}
+
+.bb-dynamic-input {
+  &.bb-schedule__end-date {
+    .bb-input-datepicker__wrapper {
+      @media (min-width: $screen-s) {
+        width: 16rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-s) {
+  .rbs-payment-widget__container {
+    margin: 1.5rem;
+  }
+}
+
+.rbs-international-payment-instruction-image {
+  height: 70px;
+  min-width: 70px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $rbs-color-primary;
+}

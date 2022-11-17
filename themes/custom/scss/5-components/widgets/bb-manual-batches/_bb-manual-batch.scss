@@ -1,0 +1,13 @@
+//// Global annotations
+////
+//// @group widgets
+//// @access private
+////
+
+$manual-batch-button-close-background-color: $color-neutral-white !default;
+$manual-batch-button-close-box-shadow: $box-shadow-sm !default;
+
+.manual-batch__button-close {
+  background-color: $manual-batch-button-close-background-color;
+  box-shadow: $manual-batch-button-close-box-shadow;
+}

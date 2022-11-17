@@ -1,0 +1,15 @@
+$search-country-control-height: 2rem !default;
+
+bb-select-country-dropdown {
+  &.ng-touched.ng-invalid {
+    .bb-select-country-dropdown__toggle.form-control {
+      border: $input-invalid-border;
+    }
+  }
+
+  .bb-search-box__simple-input,
+  .bb-search-box__search-button .btn,
+  .bb-search-box__clear-button .btn {
+    height: $search-country-control-height;
+  }
+}

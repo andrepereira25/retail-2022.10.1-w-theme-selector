@@ -1,0 +1,61 @@
+rbs-account-details-widget {
+  bb-alert-ui {
+    .alert-warning,
+    .alert-info {
+      background-color: $color-neutral-white;
+      color: $color-neutral-black;
+    }
+
+    ngb-alert {
+      border-radius: 8px;
+      box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .alert-heading {
+      font-size: 1rem;
+    }
+
+    .alert-content {
+      font-weight: 300 !important;
+    }
+
+    .bb-icon-warning,
+    .bicon-warning {
+      &:before {
+        background: url("../../assets/icons/i-warning.svg") no-repeat;
+        background-size: cover;
+        display: block;
+        width: 24px;
+        height: 24px;
+        content: " ";
+      }
+    }
+
+    .bb-icon-info,
+    .bicon-info {
+      &:before {
+        background: url("../../assets/icons/i-info.svg") no-repeat;
+        background-size: cover;
+        display: block;
+        width: 24px;
+        height: 24px;
+        content: " ";
+      }
+    }
+  }
+}
+
+.alert {
+  font-weight: 300;
+}
+
+.rbs-transaction-list__error {
+  width: 100%;
+  color: $rbs-color-neutral-lightest;
+  button {
+    border: $border-width solid $rbs-color-neutral-lightest;
+    color: $rbs-color-neutral-lightest;
+    margin-top: $spacer-lg;
+    font-weight: $font-weight-light;
+  }
+}

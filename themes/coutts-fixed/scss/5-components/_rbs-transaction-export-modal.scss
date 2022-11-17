@@ -1,0 +1,11 @@
+.rbs-transaction-export-modal {
+  .modal-dialog {
+    max-width: 685px;
+  }
+
+  bb-loading-indicator-ui {
+    position: absolute;
+    right: 58px;
+    bottom: -10px;
+  }
+}

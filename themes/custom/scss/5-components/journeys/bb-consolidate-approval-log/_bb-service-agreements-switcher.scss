@@ -1,0 +1,31 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+$bb-dropdown-sa-switcher-size: 30rem !default;
+
+.bb-select-context-h {
+  height: $sizer;
+}
+
+.bb-dropdown-width {
+  width: $bb-dropdown-sa-switcher-size;
+}
+
+.bb-dropdown-menu-max-height {
+  max-height: $bb-dropdown-sa-switcher-size;
+}
+
+.bb-dropdown-sa-switcher__sticky-footer {
+  position: sticky;
+  background-color: $color-neutral-white;
+  border-top: $border;
+  padding: $sizer;
+  bottom: 0;
+}
+
+.bb-dropdown-sa-switcher-container > .bb-dropdown-sa-switcher-menu {
+  padding-bottom: 0;
+}

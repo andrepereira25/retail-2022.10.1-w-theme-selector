@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/components",
+  "sourceRoot": "libs/components/src",
+  "prefix": "bb",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/components/src/test.ts",
+        "tsConfig": "libs/components/tsconfig.spec.json",
+        "karmaConfig": "libs/components/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/components/src/**/*.ts", "libs/components/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

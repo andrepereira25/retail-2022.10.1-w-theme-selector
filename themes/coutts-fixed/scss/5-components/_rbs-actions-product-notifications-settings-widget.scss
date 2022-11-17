@@ -1,0 +1,71 @@
+rbs-actions-product-notifications-settings-widget {
+  .rbs-actions-product-notification-channels {
+    .bb-input-radio-group__radio.selected:not(:disabled):not(.disabled)::after {
+      color: $color-primary;
+      background-color: $color-primary;
+    }
+
+    .bb-input-radio-group__radio.selected:not(:disabled):not(.disabled)::before {
+      border-color: $rbs-color-selected-default;
+    }
+
+    .bb-input-radio-group__radio.focus::before {
+      box-shadow: $rbs-input-btn-focus-box-shadow;
+    }
+
+    .bb-input-radio-group__radio:not(:last-child) {
+      margin-bottom: 0.2rem;
+    }
+
+    .bb-input-radio-group__list {
+      margin-top: 1rem;
+    }
+
+    .bb-switch {
+      flex-direction: row-reverse;
+    }
+
+    .bb-switch__label {
+      margin-left: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .bb-input-inline-edit-ui {
+    .bb-stack {
+      width: min-content;
+      flex-direction: row-reverse;
+    }
+
+    .form-group {
+      .bb-stack {
+        width: 100%;
+        flex-direction: row;
+      }
+
+      .btn-success.btn-circle:not(.btn-circle--filled)[disabled] {
+        bb-icon-ui {
+          color: #dedede;
+        }
+      }
+
+      .btn.btn-circle {
+        border-radius: 2rem;
+      }
+    }
+  }
+  .bb-highlight {
+    line-height: 2.4rem;
+  }
+
+  .currency-shortcut {
+    line-height: 2.4rem;
+    font-weight: 400;
+    font-size: 1.125rem;
+  }
+
+  .bb-switch__element--checked {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}

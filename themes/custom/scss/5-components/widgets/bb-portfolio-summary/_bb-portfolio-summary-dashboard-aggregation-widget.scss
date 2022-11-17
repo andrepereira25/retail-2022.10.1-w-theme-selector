@@ -1,0 +1,10 @@
+// Global annotations
+////
+/// @group widgets
+/// @access public
+////
+$portfolio-summary-dashboard-aggregation-header-padding-left: $spacer * 2.5 !default;
+
+.portfolio-summary-dashboard-aggregation__header {
+  padding-left: $portfolio-summary-dashboard-aggregation-header-padding-left;
+}

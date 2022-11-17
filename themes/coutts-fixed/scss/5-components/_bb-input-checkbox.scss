@@ -1,0 +1,68 @@
+$input-checkbox-checkbox-dimensions: 1.5rem !default;
+$input-checkbox-label-left-margin: $spacer-sm !default;
+$input-checkbox-checkbox-border-radius: 0 !default;
+$input-checkbox-bg: $input-bg !default;
+$input-checkbox-border-color: $input-border-color !default;
+$input-checkbox-checked-bg: $color-info !default;
+$input-checkbox-checked-border-color: $color-info !default;
+$input-checkbox-checked-color: $color-neutral-white !default;
+$input-checkbox-checkbox-font-size: 1.3rem !default;
+
+.rbs-fake-checkbox {
+  position: relative;
+  display: inline-flex;
+  padding-left: calc(
+    #{$input-checkbox-checkbox-dimensions} + #{$input-checkbox-label-left-margin}
+  );
+
+  &::before {
+    background-color: $input-checkbox-bg;
+    border: $input-border-width solid $input-checkbox-border-color;
+    border-radius: $input-checkbox-checkbox-border-radius;
+    cursor: pointer;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - #{$input-checkbox-checkbox-dimensions / 2});
+    left: 0;
+    width: $input-checkbox-checkbox-dimensions;
+    height: $input-checkbox-checkbox-dimensions;
+    content: "";
+  }
+
+  &--checked,
+  &--indeterminate {
+    &::before {
+      background-color: $input-checkbox-checked-bg;
+      border-color: $input-checkbox-checked-border-color;
+    }
+
+    &::after {
+      @include material-icons();
+      color: $input-checkbox-checked-color;
+      font-weight: bold;
+      font-size: $input-checkbox-checkbox-font-size;
+      line-height: $input-checkbox-checkbox-dimensions;
+      // Pixel value line-height fallback for IE11
+      @include ms-browsers-only {
+        line-height: ($input-checkbox-checkbox-dimensions / 1rem) *
+          $font-size-fallback;
+      }
+      text-align: center;
+    }
+  }
+
+  &--checked {
+    &::after {
+      content: "check";
+    }
+  }
+
+  &--indeterminate {
+    &::after {
+      content: "remove";
+    }
+  }
+}

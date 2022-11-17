@@ -1,0 +1,118 @@
+rbs-account-statement-list-widget-extended {
+  .flex {
+    &-label {
+      flex: 0 0 3em;
+    }
+
+    &-fill {
+      flex: 1 1 auto;
+    }
+  }
+
+  .filter {
+    &-group__label {
+      font-size: 1rem;
+    }
+  }
+
+  .text-smaller {
+    font-size: 0.75rem;
+  }
+
+  .bb-input-checkbox__input:checked + .bb-input-checkbox__content::before,
+  .bb-input-checkbox__input:indeterminate
+    + .bb-input-checkbox__content::before {
+    background-color: $rbs-color-primary;
+    border-color: $rbs-color-primary;
+  }
+
+  .form-group-date--from,
+  .form-group-date--to {
+    :not(.rbs-invalid-form) {
+      .bb-input-datepicker__wrapper {
+        .bb-input-datepicker {
+          .bb-input-datepicker__input.ng-touched.ng-invalid
+            + .input-group-append
+            .bb-input-datepicker__calendar-opener-button,
+          .form-control[type="text"].ng-touched.ng-invalid {
+            border-color: #c5c5c5;
+          }
+        }
+      }
+      .bb-input-datepicker__input.ng-touched.ng-invalid
+        + ngb-datepicker
+        + .input-group-append
+        .bb-input-datepicker__calendar-opener-button,
+      .bb-input-datepicker__input.ng-touched.ng-invalid
+        + .input-group-append
+        .bb-input-datepicker__calendar-opener-button {
+        border-color: #c5c5c5;
+      }
+    }
+
+    .rbs-invalid-form {
+      .bb-input-datepicker__input.ng-touched.ng-invalid
+        + ngb-datepicker
+        + .input-group-append
+        .bb-input-datepicker__calendar-opener-button,
+      .bb-input-datepicker__input.ng-touched.ng-invalid
+        + .input-group-append
+        .bb-input-datepicker__calendar-opener-button {
+        border-color: #ba293a;
+      }
+    }
+
+    .rbs-invalid-form-group {
+      .bb-input-datepicker__wrapper.ng-touched {
+        .bb-input-datepicker {
+          .bb-input-datepicker__input.ng-touched {
+            border-color: #ba293a;
+          }
+          .input-group-append .bb-input-datepicker__calendar-opener-button {
+            border-color: #ba293a;
+          }
+        }
+      }
+    }
+  }
+
+  // .table-responsive .table tbody td.web-container {
+  //     @media screen and (max-width: $screen-s) {
+  //         display: none;
+  //     }
+  // }
+
+  .bb-icon-description {
+    &:before {
+      background: url("../../assets/icons/description.svg") no-repeat;
+      display: block;
+      width: 72px;
+      height: 72px;
+      content: " ";
+    }
+  }
+
+  bb-empty-state-ui {
+    .bb-empty-state {
+      max-width: unset;
+    }
+  }
+
+  tr.rbs-account-statement-table-row-unread[bb-account-statement-table-row-extended],
+  .account-statements-filter__form-container {
+    background-color: $rbs-color-lite-grey;
+  }
+
+  bb-account-statement-table.card-section {
+    padding: unset;
+  }
+
+  .table thead th,
+  .table td {
+    padding-left: 1.5rem;
+  }
+
+  .mobile-view {
+    padding: 1rem 1.5rem;
+  }
+}

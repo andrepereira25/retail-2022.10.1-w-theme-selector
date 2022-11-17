@@ -1,0 +1,132 @@
+//// Global annotations
+////
+//// @group widgets
+//// @access private
+////
+
+$loan-item-overdue-background-color: $color-danger-lightest !default;
+$loan-table-even-item-background-color: $color-neutral-lightest !default;
+
+$loans-list-item-button-box-shadow: $input-btn-focus-box-shadow inset !default;
+$loans-list-item-button-transition: $btn-transition !default;
+$loans-list-item-info-wrapper-max-width: calc(
+  100% - #{$font-icon-background-size-lg + $spacer-md + $btn-circle-sm-size + $spacer-md}
+) !default;
+
+$loans-list-item-icon-size-xs: $font-icon-background-size-sm !default;
+$loans-list-item-icon-font-size-xs: $font-icon-size-sm !default;
+$loans-list-item-menu-button-size-xs: $btn-circle-sm-size !default;
+
+/// Loans loan list item styles.
+///
+/// @example html
+///
+/// <div class="bb-loans-list-item-wrapper bb-loans-list-item-wrapper--overdue">
+///   <div class="bb-stack bb-stack--align-top bb-loans-list-item">
+///     <bb-icon-ui class="bb-stack__item bb-stack__item--align-top bb-loans-list-item__icon">
+///     </bb-icon-ui>
+///     <div class="bb-stack__item bb-loans-list-item__base-info-wrapper">
+///       <div class="bb-block bb-block--xs bb-loans-list-item__type">
+///         <span class="bb-loans-margin-right-sm">...</span>
+///       </div>
+///     </div>
+///     ...
+///     <div class="bb-stack__item bb-stack__item--push-right bb-text-align-right bb-loans-list-item__amounts">
+///       ...
+///     </div>
+///     <div class="bb-stack__item bb-loans-list-item__menu">
+///       ...
+///     </div>
+///   </div>
+/// </div>
+
+%focus-box-shadow {
+  &:focus {
+    outline: none;
+    box-shadow: $loans-list-item-button-box-shadow;
+    @include transition($loans-list-item-button-transition);
+  }
+}
+
+.bb-loans-margin-right-sm {
+  margin-right: $spacer-sm;
+}
+
+.bb-loans-list-item__amounts {
+  flex-shrink: 0;
+}
+
+.bb-loans-table-row:nth-child(2n) {
+  background-color: $loan-table-even-item-background-color;
+}
+
+.bb-loans-list-item-wrapper {
+  padding: $sizer-md;
+  @extend %focus-box-shadow;
+}
+
+.bb-loans-list-item-wrapper--overdue,
+.bb-loans-table-row.bb-loans-table-row--overdue {
+  background-color: $loan-item-overdue-background-color;
+}
+
+.bb-loans-list-item {
+  position: relative;
+}
+
+.bb-loans-list-menu-item {
+  @extend %focus-box-shadow;
+}
+
+@include media-breakpoint-down(md) {
+  .bb-loans-list-item {
+    flex-wrap: wrap;
+  }
+
+  .bb-loans-list-item__amounts {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .bb-loans-list-item__base-info-wrapper {
+    max-width: $loans-list-item-info-wrapper-max-width;
+  }
+
+  .bb-loans-list-item__menu {
+    margin-left: auto;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .bb-loans-list-item__amounts {
+    text-align: left;
+  }
+
+  .bb-loans-list-item__base-info-wrapper {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .bb-loans-list-item__menu {
+    position: absolute;
+    right: 0;
+  }
+
+  .bb-loans-list-item__icon {
+    position: absolute;
+
+    .bb-icon {
+      width: $loans-list-item-icon-size-xs;
+      height: $loans-list-item-icon-size-xs;
+      font-size: $loans-list-item-icon-font-size-xs;
+      line-height: $loans-list-item-icon-size-xs;
+    }
+  }
+
+  .bb-loans-list-item__type {
+    margin-right: #{$loans-list-item-menu-button-size-xs + $spacer-md};
+    margin-bottom: $spacer-md;
+    margin-left: #{$loans-list-item-icon-size-xs + $spacer-sm};
+    line-height: $loans-list-item-icon-size-xs;
+  }
+}

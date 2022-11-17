@@ -1,0 +1,56 @@
+.investments-disclaimer {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.12);
+  color: $rbs-color-hint;
+
+  .investments-title {
+    font-weight: $font-weight-semi-bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .investments-subtitle {
+    * {
+      // :only-child ?
+      display: inline-block;
+      margin: 0;
+      line-height: inherit;
+    }
+  }
+
+  .investments-body {
+    margin-top: 0.5rem;
+    padding: 1rem;
+
+    div,
+    bb-content-html {
+      display: block;
+      overflow: hidden;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0.5rem;
+      }
+
+      p {
+        margin: 0;
+        padding-right: 2rem;
+        overflow: hidden;
+        color: $rbs-default-grey-color;
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+// retail-banking-experience-demo-page
+
+// @deprecated - background color is now provided by .bb-page-layout
+.bg-gray-light-300 {
+  background-color: $color-neutral-lightest;
+}
+
+// @deprecated - background color is now provided by .bb-page-layout
+.bg-gray-lighter {
+  background-color: $color-neutral-lighter;
+}

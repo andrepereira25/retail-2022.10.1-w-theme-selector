@@ -1,0 +1,20 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.batch-upload__container {
+  margin: $spacer-xl 0;
+}
+
+.batch-upload__title {
+  margin-bottom: $spacer-xl;
+}
+
+.batch-upload__type-item-label {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  cursor: pointer;
+}

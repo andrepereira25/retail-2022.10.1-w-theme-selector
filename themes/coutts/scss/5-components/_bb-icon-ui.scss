@@ -1,0 +1,10 @@
+.bb-icon-info-outline::before {
+  content: "info_outline";
+}
+
+.bb-icon-open-banking {
+  background: center / cover url("../../assets/icons/open-banking.svg") no-repeat;
+  &::before {
+    content: "open-banking";
+  }
+}

@@ -1,0 +1,63 @@
+rbs-paperless-widget-extended {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+rbs-paperless-setting-card {
+  display: block;
+
+  .card {
+    box-shadow: $rbs-card-box-shadow;
+    padding: 2rem;
+  }
+
+  p {
+    color: $rbs-color-hint;
+    margin-bottom: 0;
+  }
+
+  .bb-button-bar {
+    margin-top: 42px;
+  }
+}
+
+.paperless-setting-modal {
+  article {
+    color: $rbs-color-hint;
+    margin-bottom: 17px;
+  }
+
+  h2 {
+    text-transform: inherit;
+  }
+
+  p {
+    color: $rbs-color-hint;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  li {
+    color: $rbs-color-hint;
+    list-style: none;
+    margin-top: 18px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  &__close-icon {
+    color: $rbs-color-primary;
+  }
+
+  .modal-header {
+    width: 100%;
+  }
+}

@@ -1,0 +1,81 @@
+/// Font family
+$font-family: "OpenSans", sans-serif;
+
+//$font-family: 'FSBrabo', serif;
+
+/// Font family used for headings, by default it will use the $font-family value
+$font-family-heading: "CouttsSienaExtraLight";
+
+/// Base typography setting
+$font-size-small: 0.75rem;
+$font-size-base: 0.875rem;
+$font-size-big: 1rem;
+$font-size-large: 1.3rem;
+
+/// 0 Hero
+// $font-size-hero:
+
+/// 1 Headings/H1 (e.g., page titles)
+// $font-size-h1:
+
+/// 2 Headings/H2 (e.g., subsection title)
+// $font-size-h2:
+
+/// 3 Headings/H3 (e.g., subsection title)
+// $font-size-h3:
+
+/// 4 Highlight (e.g., emphasizing amounts)
+// $font-size-highlight:
+
+/// 5 Default (e.g., body)
+// $font-size-default:
+
+/// 6 Subtitle (e.g., descriptions and secondary text)
+// $font-size-subtitle:
+
+/// 7 Subheader
+// $font-size-subheader:
+
+/// 8 Table default
+// $font-size-table-default:
+
+/// 9 Table header
+// $font-size-table-header:
+
+/// font-weight-light
+//$font-weight-light: 300;
+$font-face-weight-light: 300;
+/// font-weight-regular
+$font-weight-regular: 300;
+$font-face-weight-regular: 300;
+
+/// font-weight-semi-bold
+$font-weight-semi-bold: 400;
+$font-face-weight-semi-bold: 400;
+/// font-weight-bold
+$font-weight-bold: 500;
+$font-face-weight-bold: 600;
+
+/// Uses $font-weight-bold by default
+$font-weight-heading: 200;
+
+/// line-height-base
+// $line-height-base:
+
+/// line-height-heading
+// $line-height-heading:
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  text-transform: uppercase;
+}

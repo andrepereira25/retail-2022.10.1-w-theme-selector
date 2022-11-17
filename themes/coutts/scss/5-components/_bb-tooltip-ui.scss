@@ -1,0 +1,23 @@
+.tooltip-inner {
+  max-width: 250px;
+  text-align: left;
+  padding: 8px 12px;
+  font-weight: $font-weight-light;
+}
+
+.rbs-tooltip-inner {
+  h1,
+  h2,
+  h3 {
+    color: #fff;
+    text-transform: none;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

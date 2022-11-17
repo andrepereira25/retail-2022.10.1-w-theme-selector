@@ -1,0 +1,43 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access public
+////
+
+/// Configure the spacing of exception details user info card for extra small devices
+$positive-pay-user-info-xs-sizer: $sizer-sm !default;
+
+/// @example html
+/// <div role="row" class="bb-stack bb-positive-pay-exception-details-row">
+///  <div class="bb-card bb-card--sm bb-card--highlight bb-card--shadowless bb-positive-pay-user-info bb-positive-pay-full-height">
+///   <div class="bb-card__body bb-positive-pay-user-info__inner">Some content</div>
+///  </div>
+/// </div>
+///
+.bb-positive-pay-exception-details-row {
+  align-items: stretch;
+}
+
+.bb-positive-pay-user-info {
+  &:not(.bb-card--ignore).bb-card--sm.bb-card {
+    .bb-positive-pay-user-info__inner {
+      @include media-breakpoint-down(xs) {
+        padding: $positive-pay-user-info-xs-sizer;
+      }
+    }
+  }
+}
+
+/// @example html
+/// <div class="bb-stack bb-positive-pay-exception-error">
+///  <bb-icon-ui class="bb-stack__item bb-positive-pay-exception-error__icon bb-positive-pay-exception-error__icon--inline" name="error-outline"></bb-icon-ui>
+///  <span class="bb-stack__item bb-positive-pay-exception-error__date">Dec 21, 2021</span>
+/// </div>
+///
+.bb-positive-pay-exception-error__icon--inline {
+  display: inline-block;
+}
+
+.bb-positive-pay-exception-error__date {
+  white-space: pre-wrap;
+}

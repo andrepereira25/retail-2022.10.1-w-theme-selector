@@ -1,0 +1,33 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+/// This class used to be responsible for sizing and spacing `bb-payment-card`, but this is now
+/// handled by that class itself.  This class no longer needs to be used and only applies
+/// `display: inline` for backwards compatibility.
+///
+/// @name bb-payment-card-component
+///
+/// @deprecated - sizing and spacing is now handled by `.bb-payment-card` itself
+///
+/// @example html
+///   <div class="bb-payment-card-component">
+///     <div class="bb-payment-card">
+///       <div class="bb-payment-card__container"></div>
+///     </div>
+///   </div>
+///   <div class="bb-payment-card-component">
+///     <div class="bb-payment-card">
+///       <div class="bb-payment-card__container"></div>
+///     </div>
+///   </div>
+///   <div class="bb-payment-card-component">
+///     <div class="bb-payment-card">
+///       <div class="bb-payment-card__container"></div>
+///     </div>
+///   </div>
+.bb-payment-card-component {
+  display: inline;
+}

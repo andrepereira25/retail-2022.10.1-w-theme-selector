@@ -1,0 +1,21 @@
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $rbs-color-neutral-dark;
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  // For IE
+  & {
+    scrollbar-face-color: $rbs-default-grey-color;
+    scrollbar-track-color: transparent;
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7C283382-8DC0-439C-9FBE-BA2777D7E422@0.5x</title>
+    <defs>
+        <polygon id="path-1" points="10.59 0 6 4.58 1.41 0 0 1.41 6 7.41 12 1.41"></polygon>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Mapping-Icons" transform="translate(-174.000000, -255.000000)"></g>
+        <g id="chevron-down" transform="translate(6.000000, 8.590000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#5A287D" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

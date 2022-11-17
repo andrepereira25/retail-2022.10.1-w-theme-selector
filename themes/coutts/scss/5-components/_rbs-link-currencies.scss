@@ -1,0 +1,117 @@
+.rbs-currencies-list {
+  &__description {
+    p {
+      color: $rbs-color-neutral-dark;
+      font-weight: $font-face-weight-regular;
+
+      strong {
+        color: #000;
+        font-weight: $font-face-weight-semi-bold;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-big;
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding-left: 55px;
+    line-height: 35px;
+    font-size: $font-size-big;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 100%;
+    }
+
+    &:before {
+      left: 0;
+      top: 0;
+      width: 35px;
+      height: 35px;
+      border: 1px solid $rbs-color-neutral-dark;
+    }
+
+    &--selected {
+      &:before {
+        border-color: $rbs-color-primary;
+      }
+
+      &:after {
+        content: 'check';
+        font-family: "Material Icons Outlined";
+        top: 3px;
+        left: 3px;
+        width: 29px;
+        height: 29px;
+        background: $rbs-color-primary;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 29px;
+      }
+    }
+  }
+
+  &--modal-full-width {
+    margin: 0 -2rem;
+    padding: 0 2rem;
+  }
+
+  &--shift-options {
+    margin-left: 55px;
+  }
+
+  &--disabled {
+    position: relative;
+    opacity: .6;
+    pointer-events: none;
+
+    &::after {
+      content: '';
+      cursor: default;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $rbs-default-grey-color;
+      opacity: .1;
+      z-index: 1;
+    }
+  }
+
+  &--invisible-input {
+    .bb-input-radio-group__radio {
+      &:before,
+      &:after {
+        display: none !important;
+      }
+    }
+  }
+
+  .bb-input-radio-group__label {
+    display: none;
+  }
+
+  .bb-input-radio-group__radio {
+    &:first-child {
+      .radio-template {
+        margin: 0 0 0 calc(-1.5rem - 1.25rem);
+        padding: 0.5rem 0 0 calc(1.5rem + 1.25rem);
+      }
+    }
+  }
+}
+
+.insufficient-form {
+  .bb-input-radio-group__radio:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

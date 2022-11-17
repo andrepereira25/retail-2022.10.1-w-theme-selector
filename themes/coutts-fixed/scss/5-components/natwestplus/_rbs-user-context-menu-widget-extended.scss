@@ -1,0 +1,87 @@
+rbs-user-context-menu-widget-extended {
+  .user-context-dropdown {
+    @media (min-width: $screen-s) {
+      height: 4.5rem;
+    }
+
+    .user-context-dropdown {
+      &__selector {
+        background-color: transparent;
+        border-bottom: 4px solid transparent;
+        border-radius: $border-radius-none;
+        color: $color-neutral-white;
+        height: 4.5rem;
+
+        &:active,
+        &:hover,
+        &:hover:focus,
+        &hover.focus {
+          background-color: transparent;
+          border-bottom: 4px solid $border-color-neutral-light;
+        }
+      }
+
+      &__toggle {
+        color: #22bd05;
+      }
+    }
+  }
+
+  .user-context-menu-info {
+    &__description {
+      max-width: 9.5rem;
+      margin: 0 1rem;
+      text-align: initial;
+    }
+    &__last-login-date {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+
+  .dropdown-menu {
+    padding-top: 0;
+    margin-top: 0;
+    padding: 0.5rem 0;
+  }
+}
+
+bb-service-agreement-list {
+  .bb-select-context__item.list-group-item-action:hover,
+  .bb-select-context__item.list-group-item-action:focus {
+    background-color: $rbs-color-hover-gray;
+  }
+}
+bb-service-agreement-item {
+  .bb-user-context-icon-ui {
+    background-image: url(../../../assets/icons/rbs-service-agreement-icon.svg);
+  }
+}
+
+.dropdown-item.user-context-menu__context-switcher {
+  background-color: $rbs-color-neutral-grey;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    background-color: $rbs-color-neutral-greyer;
+  }
+
+  .bb-user-context-icon-ui {
+    width: 3rem;
+    background-image: url(../../../assets/icons/rbs-service-agreement-lightning-icon.svg);
+
+    .bb-user-context-icon-text {
+      display: none;
+    }
+  }
+}
+
+bb-select-context-container {
+  .bb-search-box bb-icon-ui i {
+    color: #000000;
+  }
+
+  .btn-secondary {
+    color: #000000;
+  }
+}

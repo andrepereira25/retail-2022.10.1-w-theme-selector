@@ -1,0 +1,7 @@
+@import "font-faces";
+
+@import "~@backbase/backbase-theme/scss/3-generic/generic";
+
+bb-chrome[data-chrome] {
+  min-height: 25px;
+}

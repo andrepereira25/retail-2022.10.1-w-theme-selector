@@ -1,0 +1,103 @@
+.bg-neutral-light {
+  background-color: $color-neutral-light;
+}
+
+.rbs-box {
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.12);
+  @extend .bg-white;
+}
+
+.rbs-text-decoration-none {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.rbs-text-decoration-none:hover {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.rbs-icon--opacity {
+  opacity: 0.7;
+}
+
+.rbs-logout-button {
+  padding-top: 1rem;
+  border-top: 1px solid $rbs-color-light-grey;
+}
+
+.rbs-list {
+  display: block;
+  margin: $spacer $spacer-xs $spacer-xl;
+}
+
+.rbs-text {
+  &-highlighted {
+    color: $rbs-color-info;
+    font-weight: $font-face-weight-bold;
+  }
+  &-regular {
+    font-weight: $font-face-weight-regular;
+  }
+  &-light {
+    font-weight: $font-weight-light;
+  }
+  &-action {
+    color: $rbs-color-primary-darker;
+  }
+  &-support {
+    font-weight: $font-weight-light;
+    color: #000000;
+  }
+  &-semi-bold {
+    font-weight: $font-face-weight-semi-bold;
+  }
+  &-inactive {
+    color: $rbs-color-light-grey;
+  }
+}
+
+.rbs-font-small {
+  font-size: $font-size-small;
+}
+
+.rbs-font-big {
+  font-size: $font-size-big;
+}
+
+.rbs-font-large {
+  font-size: $font-size-large;
+}
+
+.bb-tab-container__content {
+  &:focus {
+    outline-color: transparent;
+  }
+}
+
+.bb-empty-state {
+  margin-top: 50px !important;
+}
+
+.rbs-bg-light-gray {
+  background-color: $rbs-color-light-grey;
+}
+
+.text-color-white {
+  color: $color-neutral-white;
+}
+
+.text-color-black-and-bold {
+  font-weight: bold;
+  color: $rbs-color-neutral-darker;
+}
+
+.rbs-notification {
+  background: $rbs-color-neutral-lightest;
+  font-size: $font-size-small;
+}
+
+.rbs-payment-info {
+  background: $rbs-color-neutral-lightest;
+  padding: 8px 12px;
+}

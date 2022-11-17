@@ -1,0 +1,113 @@
+@mixin title() {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-family: OpenSans;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 34px;
+  text-transform: capitalize;
+}
+
+.travel-protection {
+  .product-information,
+  .eligibility-confirmation,
+  .medical-scan,
+  .loss-damage-waiver,
+  .review-screen,
+  .cancel-screen,
+  .ts-tc {
+    h2 {
+      @include title;
+
+      & + p {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+    p {
+      color: #706464;
+      font-weight: 100;
+    }
+
+    ul {
+      padding-left: 2.5rem;
+      font-weight: 100;
+    }
+
+    & > div,
+    & > span {
+      color: #706464;
+      line-height: 21px;
+      font-weight: 100;
+    }
+
+    bb-dropdown-single-select-ui {
+      margin-top: 0.5rem;
+
+      label {
+        font-weight: 100;
+      }
+    }
+
+    .dropdown-option-description {
+      font-size: 14px;
+      line-height: 24px;
+      color: #737373;
+    }
+
+    .scrollable-content {
+      max-height: 65vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+
+  .medical-scan {
+    ol {
+      line-height: 1.5rem;
+      padding-inline-start: 1.8rem;
+    }
+
+    ol ul {
+      list-style-type: lower-alpha;
+      padding-left: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    .error-message {
+      color: #ba293a;
+    }
+  }
+
+  .ts-tc {
+    .awarness {
+      display: block;
+      height: 6rem;
+    }
+
+    .documents-read {
+      display: block;
+      height: 3rem;
+    }
+  }
+
+  .confirmation {
+    h2 {
+      @include title;
+    }
+  }
+
+  .bb-button-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 0;
+  }
+}
+
+.travel-protection {
+  .review-screen {
+    ul li {
+      padding-left: 0.875rem;
+    }
+  }
+}

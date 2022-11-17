@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-internal-account-selector
+
+.bb-internal-account-selector__subheader {
+  width: 100%;
+  padding: $spacer-lg $spacer-xl 0;
+  outline: none;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="252px" height="157px" viewBox="0 0 252 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Card Content</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="252" height="157" rx="16"></rect>
+        <linearGradient x1="50%" y1="106.865113%" x2="50%" y2="-4.81786083%" id="linearGradient-3">
+            <stop stop-color="#181E41" offset="0%"></stop>
+            <stop stop-color="#23345E" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="0" y="25" width="252" height="34.0354286"></rect>
+    </defs>
+    <g id="↳-Reset/Request-PIN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2---Request-new-PIN" transform="translate(-736.000000, -154.000000)">
+            <g id="Modal" transform="translate(420.000000, 56.000000)">
+                <g id="Group" transform="translate(32.000000, 98.000000)">
+                    <g id="Card-Content" transform="translate(284.000000, 0.000000)">
+                        <g id="2-Base-Radius/4-Medium">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="shadow-level"></g>
+                            <rect id="🎨-bg-color" fill="url(#linearGradient-3)" fill-rule="evenodd" mask="url(#mask-2)" x="0" y="0" width="252" height="157"></rect>
+                        </g>
+                        <rect id="Rectangle-Copy" fill="#FFFFFF" x="15.2727273" y="74" width="221.454545" height="34" rx="1.89538462"></rect>
+                        <text id="✏️-Last-4-Digits" font-family="Inter-Regular, Inter" font-size="16" font-weight="normal" line-spacing="24" fill="#000000">
+                            <tspan x="196.260101" y="95">123</tspan>
+                        </text>
+                        <g id="Rectangle">
+                            <use fill="#181E41" xlink:href="#path-4"></use>
+                            <use fill-opacity="0.3" fill="#FFFFFF" xlink:href="#path-4"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

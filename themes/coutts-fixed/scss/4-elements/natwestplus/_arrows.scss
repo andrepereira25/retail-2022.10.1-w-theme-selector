@@ -1,0 +1,38 @@
+.arrow-up {
+  background: url("../../../assets/icons/natwestplus/chevronUp.svg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow-down {
+  background: url("../../../assets/icons/natwestplus/chevronDown.svg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow-right {
+  background: url("../../../assets/icons/natwestplus/chevronRight.svg")
+    no-repeat;
+  background-size: cover;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow-left {
+  background: url("../../../assets/icons/natwestplus/chevronRight.svg")
+    no-repeat;
+  background-size: cover;
+  display: block;
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}

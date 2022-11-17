@@ -1,0 +1,23 @@
+rbs-cta-payment-widget {
+  .btn-group {
+    button.btn {
+      border-left: 0;
+    }
+  }
+  @media screen and (max-width: $screen-m) {
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      .btn {
+        margin-bottom: $spacer-sm;
+        justify-content: left;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-m) {
+    .btn {
+      margin-right: $spacer-sm;
+    }
+  }
+}

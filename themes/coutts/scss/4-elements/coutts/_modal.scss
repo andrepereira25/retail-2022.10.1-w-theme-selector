@@ -1,0 +1,15 @@
+.close-popup {
+  background: url("../../../assets/icons/close.svg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.modal-footer {
+  justify-content: flex-start !important;
+}

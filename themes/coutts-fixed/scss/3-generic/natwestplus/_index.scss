@@ -1,0 +1,13 @@
+@import "../font-faces";
+@import "../form-control";
+
+// Import variables from default theme
+@import "~@backbase/ui-ang/scss/3-generic/generic";
+
+bb-chrome[data-chrome] {
+  min-height: 25px;
+}
+
+.bb-text-support {
+  color: #000000 !important;
+}

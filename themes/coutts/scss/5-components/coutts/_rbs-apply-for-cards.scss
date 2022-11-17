@@ -1,0 +1,29 @@
+.bb-apply-for-cards {
+  box-shadow: $box-shadow-sm;
+  background-color: $rbs-color-neutral-white;
+  background-clip: border-box;
+  border: 0 solid $rbs-color-neutral-white;
+  padding: 32px;
+  color: #706464;
+  font-weight: 100;
+
+  .apply-for-card-title {
+    line-height: 21px;
+    margin: 10px 0px 10px 0px;
+    font-weight: bolder;
+    font-size: 1.3rem;
+  }
+}
+
+.apply-for-cards-description > div:first-of-type {
+  margin: 10px 0px 10px 0px;
+}
+
+.apply-for-cards-description > div:last-of-type {
+  margin: 10px 0px 20px 0px;
+}
+
+.apply-for-cards-heading {
+  margin-top: 30px;
+  margin-bottom: 36px !important;
+}

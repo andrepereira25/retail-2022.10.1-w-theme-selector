@@ -1,0 +1,151 @@
+rbs-card-details-widget-extended {
+  bb-payment-card-state-wrapper-ui {
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .card-holder-name {
+    color: $rbs-color-neutral-darker;
+    font-size: $h5-font-size;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: $h5-font-size;
+    margin-bottom: 10px;
+  }
+
+  .card-product-name {
+    color: #55585a;
+    font-size: $h6-font-size;
+    letter-spacing: 0.17px;
+    line-height: $h6-font-size;
+  }
+
+  .bb-list__item:not(:last-of-type)::after {
+    display: none;
+  }
+}
+
+rbs-card-temporary-address {
+  .rbs-ng-select-container.ng-select {
+    &.ng-invalid.ng-touched .ng-select-container {
+      border-color: $rbs-color-danger-default;
+    }
+    &.ng-select-opened .ng-select-container {
+      .ng-arrow-wrapper .ng-arrow::after {
+        content: "expand_less";
+      }
+    }
+    .ng-select-container {
+      height: 40px;
+      border-radius: 0;
+      border: 1px solid #dedede;
+      .ng-value-container {
+        .ng-value {
+          padding: 0 0.2rem 0 0.3rem;
+        }
+        .ng-input {
+          top: 0;
+          bottom: 0;
+          display: flex;
+          padding-left: 1rem;
+          input {
+            font-weight: 300;
+            font-size: 1rem;
+          }
+        }
+      }
+      .ng-arrow-wrapper .ng-arrow {
+        top: 4px;
+        width: auto;
+        color: $rbs-color-hint;
+        border: none;
+        display: inline-block;
+        font-weight: normal;
+        font-size: 1.5rem;
+        font-family: "Material Icons";
+        font-style: normal;
+        line-height: 0.9;
+        direction: ltr;
+        letter-spacing: normal;
+        white-space: nowrap;
+        text-transform: none;
+        word-wrap: normal;
+        font-feature-settings: "liga";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        &::after {
+          margin: 0 -4px;
+          content: "expand_more";
+        }
+      }
+    }
+  }
+}
+
+.modal-body {
+  outline: none;
+}
+
+.replacement-form {
+  .bb-input-radio-group__radio:not(:last-child) {
+    border-bottom: solid 1px $rbs-color-neutral-grey;
+  }
+}
+
+.rbs-warning-sub-header {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: $rbs-pale-pink-color;
+}
+
+.review-replacement-details {
+  > div {
+    border-bottom: solid 1px $rbs-color-neutral-grey;
+  }
+
+  rbs-mask-credit-card {
+    span {
+      color: inherit;
+      font-size: $h6-font-size;
+      font-weight: 500;
+      line-height: 28px;
+      margin: 0 7.5px;
+      vertical-align: bottom;
+
+      &.numbers {
+        letter-spacing: 0;
+      }
+
+      &.stars {
+        font-size: 33px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.card-body:focus {
+  outline: none;
+}
+
+.pca {
+  .pcatext {
+    font: inherit !important;
+    color: inherit !important;
+  }
+  .pcaitem {
+    line-height: 2 !important;
+  }
+}

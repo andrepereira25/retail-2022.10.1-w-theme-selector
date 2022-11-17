@@ -1,0 +1,201 @@
+rbs-account-details-widget,
+rbs-transaction-details-ui {
+  .account-details-header-title {
+    font-size: $h4-font-size;
+    text-transform: uppercase;
+    margin-bottom: $spacer-md;
+  }
+
+  .account-details-header-title--nomargin {
+    margin-bottom: 0;
+  }
+
+  .account-details__field-title {
+    font-size: $font-size-subtitle;
+  }
+
+  .bb-account__amount {
+    .bb-amount__value {
+      .symbol {
+        margin: 0;
+      }
+    }
+  }
+  .account-details__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .account-details__header--name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  .account-details__field-title {
+    margin-bottom: 0.5rem;
+    font-weight: $font-face-weight-bold;
+    font-size: $font-size-h3;
+  }
+
+  .account-details__header--subtitle {
+    color: $dark;
+    font-size: $font-size-base;
+  }
+
+  .account-details__header--balance {
+    margin-top: 1rem;
+    font-size: $font-size-h3;
+    text-align: right;
+  }
+
+  .account-details__info-block {
+    margin-top: 1.5rem;
+    border-bottom: 1px solid $border-color-neutral-light;
+  }
+
+  .account-details__info-block--borderless {
+    border-bottom: 0;
+  }
+
+  .account-details-single {
+    &__info-block {
+      margin-top: 1.5rem;
+      border-bottom: 1px solid $border-color-neutral-light;
+    }
+
+    &__container {
+      :last-child {
+        .account-details-single__info-block {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .account-details__field-title {
+    color: $dark;
+    font-size: $font-size-subtitle;
+  }
+  //.inner-div:not(:last-child):after {
+  //  content: 'not in the bottom div';
+  //}
+
+  .account-details__field-value {
+    margin-bottom: 1rem;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+
+    .account-details__field-value--multilines:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  .account-details-field--value-multilines {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    &.rbs-payee-details:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+  .rbs-payee-details--multilines {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .account-details__field-value--extra-space {
+    margin-bottom: 1.5rem;
+  }
+
+  .account-details__balance {
+    padding-top: 1rem;
+    border-top: 1px solid $border-color-neutral-light;
+    border-bottom: 1px solid $border-color-neutral-light;
+  }
+
+  .account-details__balance--empty {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  .cards-title {
+    .padding-left-none {
+      padding-left: 0;
+    }
+    button {
+      color: $rbs-color-neutral-darker;
+      padding: 0;
+      outline: none;
+    }
+    button:hover {
+      color: $rbs-color-neutral-darker;
+    }
+    .card-body {
+      padding: 0;
+    }
+    .card-header {
+      padding-left: 0;
+    }
+    .btn-link {
+      color: $rbs-color-neutral-darker !important;
+    }
+    .btn-link:focus,
+    .btn-link.focus {
+      box-shadow: none;
+    }
+  }
+
+  .card-block {
+    margin-bottom: 10px;
+    border-bottom: 1px solid $rbs-color-neutral-grey;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] ~ div.card-content {
+    height: 0;
+    transform: scaleY(0);
+  }
+
+  input[type="checkbox"]:checked ~ div.card-content {
+    height: 100%;
+    transform-origin: top;
+    transition: transform 0.2s ease-out;
+    transform: scaleY(1);
+  }
+
+  .arrow-defaults {
+    background: url("../../../assets/icons/chevron.svg") no-repeat;
+    background-size: cover;
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  input[type="checkbox"] ~ label > div.item-expanded {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  input[type="checkbox"]:checked ~ label > div.item-expanded {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}

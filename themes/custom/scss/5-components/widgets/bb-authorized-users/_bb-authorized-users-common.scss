@@ -1,0 +1,6 @@
+@include media-breakpoint-down(sm) {
+  .bb-authorized-users-common-permission-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

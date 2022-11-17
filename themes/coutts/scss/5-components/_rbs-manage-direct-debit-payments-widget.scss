@@ -1,0 +1,64 @@
+.rbs-manage-direct-debit-payments-widget,
+.rbs-future-transactions-list-widget-extended,
+.rbs-standing-orders-list-widget-extended {
+  .payments-list__table-body {
+    font-weight: $font-weight-regular;
+  }
+
+  .rbs-manage-direct-debit__item-list {
+    overflow-x: visible;
+  }
+
+  .rbs-manage-direct-debit__responsive-item-list {
+    display: none;
+  }
+
+  @media (max-width: $screen-s) {
+    .rbs-manage-direct-debit__item-list.table-responsive {
+      display: none;
+    }
+
+    .rbs-manage-direct-debit__responsive-item-list {
+      display: block;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-bottom: solid 1px $rbs-color-neutral-grey;
+      .rbs-manage-direct-debit__responsive--inner_container {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .counterpartyNameCell {
+    width: 200px;
+  }
+  .payments-list__table-body {
+    font-weight: $font-weight-regular;
+  }
+
+  bb-manage-payments-list-header {
+    display: none;
+  }
+
+  .orders-col-payee-name {
+    width: 22rem;
+
+    @media (max-width: $screen-m) {
+      width: unset;
+    }
+  }
+}
+
+.rbs-payments-details__fee-details-link {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  a {
+    text-decoration: none;
+  }
+}

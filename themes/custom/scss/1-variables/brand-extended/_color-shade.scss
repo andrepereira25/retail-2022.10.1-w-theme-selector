@@ -1,0 +1,178 @@
+////
+/// Color gradients (global)
+/// @group 1-variables/brand-extended/chart-shade
+/// @access private
+////
+
+$color-shade-lighter: 30%;
+$color-shade-lightest: 85%;
+$color-shade-darker: 30%;
+$color-shade-darkest: 45%;
+
+/// The 30% lighter shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-lighter
+$color-primary-lighter: #1e1e1e12;
+
+/// The 85% lighter shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-lightest
+$color-primary-lightest: #1e1e1e13;
+
+/// The 30% darker shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-darker
+$color-primary-darker: #1e1e1e14;
+
+/// The 45% darker shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-darkest
+$color-primary-darkest: #1e1e1e15;
+
+/// The 30% lighter shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-lighter
+$color-secondary-lighter: #11111112;
+
+/// The 85% lighter shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-lightest
+$color-secondary-lightest: #11111113;
+
+/// The 30% darker shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-darker
+$color-secondary-darker: #11111114;
+
+/// The 45% darker shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-darkest
+$color-secondary-darkest: #11111115;
+
+/// The 30% lighter shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-lighter
+$color-accent-lighter: #22222212;
+
+/// The 85% lighter shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-lightest
+$color-accent-lightest: #22222213;
+
+/// The 30% darker shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-darker
+$color-accent-darker: #22222214;
+
+/// The 45% darker shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-darkest
+$color-accent-darkest: #22222215;
+
+/// The 30% lighter shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-lighter
+$color-success-lighter: #33333312;
+
+/// The 85% lighter shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-lightest
+$color-success-lightest: #33333313;
+
+/// The 30% darker shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-darker
+$color-success-darker: #33333314;
+
+/// The 45% darker shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-darkest
+$color-success-darkest: #33333315;
+
+/// The 30% lighter shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-lighter
+$color-danger-lighter: #44444412;
+
+/// The 85% lighter shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-lightest
+$color-danger-lightest: #44444413;
+
+/// The 30% darker shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-darker
+$color-danger-darker: #44444414;
+
+/// The 45% darker shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-darkest
+$color-danger-darkest: #44444415;
+
+/// The 30% lighter shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-lighter
+$color-warning-lighter: #55555512;
+
+/// The 85% lighter shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-lightest
+$color-warning-lightest: #55555513;
+
+/// The 30% darker shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-darker
+$color-warning-darker: #55555514;
+
+/// The 45% darker shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-darkest
+$color-warning-darkest: #55555515;
+
+/// The 30% lighter shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-lighter
+$color-info-lighter: #66666612;
+
+/// The 85% lighter shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-lightest
+$color-info-lightest: #66666613;
+
+/// The 30% darker shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-darker
+$color-info-darker: #66666614;
+
+/// The 45% darker shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-darkest
+$color-info-darkest: #66666615;

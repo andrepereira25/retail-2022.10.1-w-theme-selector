@@ -1,0 +1,24 @@
+/// heading color
+// $color-heading:
+
+$date-time-color: #6b6f6f;
+
+// For Mega Menu
+$mega-menu-bg: color("actions", "primary", "darkest");
+$mega-menu-color: color("neutrals", "white");
+$mega-menu-item-icon-padding: 1ch;
+$mega-menu-link-color: $mega-menu-color;
+$mega-menu-link-active-bg: color("actions", "primary", "dark");
+$mega-menu-link-hover-bg: color("actions", "primary", "default");
+
+$mega-menu-submenu-bg: $mega-menu-bg;
+$mega-menu-submenu-color: $mega-menu-color;
+$mega-menu-submenu-header-link-active-bg: color("actions", "primary", "dark");
+$mega-menu-submenu-header-link-hover-bg: color("actions", "primary", "default");
+$mega-menu-submenu-link-color: $mega-menu-link-color;
+$mega-menu-submenu-link-active-bg: color("actions", "primary", "darker");
+$mega-menu-submenu-link-hover-bg: color("actions", "primary", "default");
+$mega-menu-dropdown-bg: color("actions", "primary", "dark");
+$mega-menu-dropdown-color: $mega-menu-color;
+
+//$mega-menu-submenu-column-width: 291px;

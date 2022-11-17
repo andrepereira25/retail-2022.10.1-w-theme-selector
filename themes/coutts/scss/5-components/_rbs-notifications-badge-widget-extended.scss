@@ -1,0 +1,5 @@
+.bb-notifications-badge-widget__list {
+  margin-right: 6px !important;
+  overflow-x: hidden;
+  @include scrollbar;
+}

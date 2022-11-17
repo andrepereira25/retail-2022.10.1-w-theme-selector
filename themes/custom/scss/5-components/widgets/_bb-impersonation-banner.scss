@@ -1,0 +1,58 @@
+$impersonation-banner-height: 4rem !default;
+
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for adjusting page layout when impersonation banner is displayed.
+/// Impersonation banner should be the topmost element on the page, sitting above
+/// the page-layout. This means that any page layout should adjust it's position
+/// to compensate.
+///
+/// @name bb-impersonation-banner
+/// @example html
+///  <body class="impersonated">
+///    ...
+///    <bb-impersonation-banner-layout>
+///      ...
+///    </bb-impersonation-banner-layout>
+///    ...
+///    <div class="bb-page-layout--sticky-topbar">
+///      ...
+///      <div class="bb-page-layout__topbar">
+///        ...
+///      </div>
+///      ...
+///    </div>
+///    ...
+///  </body>
+
+.impersonated bb-impersonation-banner-layout {
+  position: fixed;
+  z-index: $zindex-sticky;
+  display: block;
+  width: 100%;
+}
+
+.impersonated .bb-page-layout__topbar {
+  top: $impersonation-banner-height;
+}
+
+.impersonated .bb-page-layout--sticky-topbar {
+  padding-top: $page-layout-topbar-height + $impersonation-banner-height;
+}
+
+.impersonated .bb-page-layout--vertical-nav.bb-page-layout--sticky-sidebar {
+  @include media-breakpoint-up(lg) {
+    .bb-sidebar {
+      top: $impersonation-banner-height + $page-layout-vertical-topbar-height + 2 *
+        $page-layout-vertical-lg-topbar-padding;
+
+      @include media-breakpoint-down(md) {
+        top: 0;
+      }
+    }
+  }
+}

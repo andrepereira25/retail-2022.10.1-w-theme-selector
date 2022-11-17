@@ -1,0 +1,39 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+$icon-color-list: (
+  "secondary": $color-secondary,
+  "primary": $color-primary-lighter,
+  "info": $chart-color-7,
+) !default;
+
+/// Custom approval alias icon classes
+///
+/// @name bb-custom-approval-alias-icon
+///
+/// @example html
+///   <div>
+///     <div class="bb-custom-approval-alias-icon bb-custom-approval-alias-icon--secondary">B</div>
+///     <div class="bb-custom-approval-alias-icon bb-custom-approval-alias-icon--primary">AC</div>
+///     <div class="bb-custom-approval-alias-icon bb-custom-approval-alias-icon--info">HQ</div>
+///   </div>
+
+.bb-custom-approval-alias-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $sizer-xl;
+  height: $sizer-xl;
+  font-size: $font-size-subheader;
+  border-radius: $border-radius-sm;
+  color: $color-neutral-white;
+}
+
+@each $color, $value in $icon-color-list {
+  .bb-custom-approval-alias-icon--#{$color} {
+    background-color: $value;
+  }
+}

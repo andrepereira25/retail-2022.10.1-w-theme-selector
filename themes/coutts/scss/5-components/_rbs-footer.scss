@@ -1,0 +1,40 @@
+footer {
+  background-color: $color-secondary;
+  margin-top: 40px;
+
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  a {
+    color: $rbs-color-neutral-lighter;
+
+    &:hover {
+      text-decoration: none;
+      color: $rbs-color-neutral-lighter;
+    }
+  }
+
+  @media (max-width: $screen-s) {
+    .footer-links {
+      flex-direction: column;
+      flex-flow: column wrap;
+      max-height: 120px;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    .footer-links {
+      padding: 15px;
+    }
+
+    .link {
+      width: 50%;
+    }
+  }
+
+}

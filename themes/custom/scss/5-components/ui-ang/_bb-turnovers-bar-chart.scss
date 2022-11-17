@@ -1,0 +1,43 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+/* Overriding some of ngx-chart classes for turnovers bar-chart */
+.bb-chart {
+  .chart-legend {
+    /* stylelint-disable-next-line declaration-no-important */
+    width: 100% !important; //chart library override
+
+    .legend-label-text {
+      width: 100%;
+    }
+
+    .legend-labels {
+      background: transparent;
+    }
+
+    .legend-label-color {
+      border-radius: 100%;
+    }
+  }
+
+  .grid-panel {
+    &.odd {
+      rect {
+        fill: transparent;
+      }
+    }
+
+    &.forecast {
+      rect {
+        fill: $color-neutral-lightest;
+      }
+    }
+  }
+}
+
+:root {
+  --chart-group-bar-color: #{$chart-color-2-darker}, #{$chart-color-2-lighter};
+}

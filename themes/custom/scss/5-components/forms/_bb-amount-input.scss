@@ -1,0 +1,27 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$amount-input-height: 3.5rem !default;
+
+.bb-amount-input__symbol {
+  position: absolute;
+  inset-block-start: 50%;
+  padding-inline-start: $spacer-lg;
+  transform: translate(0, -50%);
+}
+.bb-amount-input__field {
+  position: relative;
+  flex: 1 0 auto;
+
+  input {
+    padding-inline-start: $input-padding-x * 4;
+  }
+}
+.bb-amount-input__field--large {
+  .form-control {
+    height: $amount-input-height;
+  }
+}

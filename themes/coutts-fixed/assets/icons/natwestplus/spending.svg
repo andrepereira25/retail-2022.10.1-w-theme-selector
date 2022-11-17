@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>98BE8CA7-4AAC-4C35-B242-D991A3813CDC@0.5x</title>
+    <defs>
+        <path d="M4.5,9 C5.32842712,9 6,9.67157288 6,10.5 L6,17.5 C6,18.3284271 5.32842712,19 4.5,19 C3.67157288,19 3,18.3284271 3,17.5 L3,10.5 C3,9.67157288 3.67157288,9 4.5,9 Z M9.5,5 C10.3284271,5 11,5.67157288 11,6.5 L11,17.5 C11,18.3284271 10.3284271,19 9.5,19 C8.67157288,19 8,18.3284271 8,17.5 L8,6.5 C8,5.67157288 8.67157288,5 9.5,5 Z M14.5,11 C15.3284271,11 16,11.6715729 16,12.5 L16,17.5 C16,18.3284271 15.3284271,19 14.5,19 C13.6715729,19 13,18.3284271 13,17.5 L13,12.5 C13,11.6715729 13.6715729,11 14.5,11 Z M19.5,7 C20.3284271,7 21,7.67157288 21,8.5 L21,17.5 C21,18.3284271 20.3284271,19 19.5,19 C18.6715729,19 18,18.3284271 18,17.5 L18,8.5 C18,7.67157288 18.6715729,7 19.5,7 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Mapping-Icons" transform="translate(-214.000000, -370.000000)"></g>
+        <g id="3-Icons/2-Navigation/1-Mobile/Spending">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#5A287D" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

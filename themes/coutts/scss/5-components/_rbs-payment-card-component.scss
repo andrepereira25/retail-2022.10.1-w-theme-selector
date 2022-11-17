@@ -1,0 +1,152 @@
+rbs-payment-card-ui {
+  color: white;
+
+  .card-type-143 {
+    color: white;
+    &.locked {
+      color: white;
+    }
+  }
+
+  .card-type-201 {
+    color: black;
+    &.locked {
+      color: black;
+    }
+  }
+
+  .rbs-payment-card__container {
+    position: relative;
+
+    &.damaged {
+      color: white;
+    }
+  }
+
+  .card-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+
+    bb-content-image,
+    rbs-content-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  bb-content-image,
+  rbs-content-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .bb-payment-card {
+    .bb-payment-card__number {
+      top: 57%;
+      left: 7%;
+      letter-spacing: 5px;
+      color: inherit;
+    }
+    .bb-payment-card-expiration-date {
+      left: 32%;
+      bottom: 21%;
+      color: inherit;
+    }
+    .bb-payment-card__expiration-date-label {
+      font-size: 0.5rem;
+      line-height: 1rem;
+      vertical-align: text-top;
+      padding-right: 2px;
+    }
+    .rbs-payment-card-holder {
+      position: absolute;
+      left: 7%;
+      bottom: 3%;
+      color: inherit;
+      font-family: $font-family-heading;
+      font-size: $font-size-table-header;
+      font-weight: 300;
+      text-transform: uppercase;
+      min-width: 100%;
+
+      div {
+        min-height: 1rem;
+      }
+    }
+  }
+
+  .bb-payment-card {
+    background: none;
+    overflow: hidden;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+
+  .rbs-payment-card__container {
+    padding-top: 62%;
+  }
+
+  rbs-mask-credit-card {
+    span {
+      color: inherit;
+      font-family: Roboto;
+      font-size: $h6-font-size;
+      font-weight: 500;
+      line-height: 28px;
+      margin: 0 7.5px;
+      vertical-align: bottom;
+
+      &.numbers {
+        letter-spacing: 0;
+      }
+
+      &.stars {
+        font-size: 33px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &.card-number-in-notification {
+      color: black;
+      display: inline-block;
+      position: relative;
+    }
+  }
+}
+
+rbs-cards-list-widget-extended,
+rbs-card-details-widget-extended {
+  .bb-payment-card-state__overlay:after {
+    border-radius: 10px;
+  }
+}
+
+.bb-payment-card-state__overlay::after {
+  content: none !important;
+}
+
+.bb-payment-card-state__container {
+  visibility: hidden;
+}

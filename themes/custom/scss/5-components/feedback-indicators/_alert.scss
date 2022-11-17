@@ -1,0 +1,140 @@
+// Global annotations
+////
+/// @group feedback-indicators
+/// @access private
+////
+
+@import "~bootstrap/scss/alert";
+
+$alert-notification-background-color: $color-neutral-white !default;
+$alert-notification-border-radius: $border-radius-md !default;
+$alert-notification-heading-color: $color-neutral-black !default;
+$alert-notification-closing-icon-color: $color-neutral-dark !default;
+
+// Bootstrap overrides
+@each $color, $value in $theme-alert-colors {
+  $alert-contrasted-text-color: color-yiq($value);
+
+  .alert-#{$color} {
+    @include alert-variant($value, transparent, $alert-contrasted-text-color);
+
+    .alert-link {
+      color: $alert-contrasted-text-color;
+      font-weight: normal;
+      text-decoration: underline;
+      &:focus {
+        text-decoration: none;
+        outline-width: 3px;
+        outline-style: solid;
+        outline-color: inherit;
+        outline-offset: 1px;
+      }
+    }
+
+    .close:hover {
+      color: $alert-contrasted-text-color;
+    }
+
+    .text-#{$color} {
+      /* stylelint-disable-next-line */
+      color: $alert-contrasted-text-color !important;
+    }
+
+    .bb-icon {
+      color: $alert-contrasted-text-color;
+    }
+  }
+}
+
+/// "Notification" variant for the Bootstrap alert component.  Use .bb-notification instead.
+///
+/// @name alert-notification
+/// @deprecated - use bb-notification
+///
+/// @example html
+///   <div class="alert alert-notification">
+///     <div class="alert-body">
+///       <i class="alert-icon bb-icon bb-icon-favorite"></i>
+///       <div class="alert-content">
+///         <strong class="alert-heading">Alert title</strong>
+///         <span>Alert description</span>
+///       </div>
+///     </div>
+///   </div>
+.alert-notification {
+  padding: $sizer-lg;
+  background-color: $alert-notification-background-color;
+  border-radius: $alert-notification-border-radius;
+  box-shadow: $box-shadow-sm;
+
+  .bb-button-bar {
+    margin-block-start: $spacer-md;
+  }
+
+  &.alert-dismissible {
+    .close {
+      margin: $spacer;
+      padding: $sizer-xs;
+      color: $alert-notification-closing-icon-color;
+    }
+
+    .alert-heading {
+      margin-inline-end: $spacer-lg;
+    }
+  }
+
+  .alert-heading {
+    color: $alert-notification-heading-color;
+  }
+}
+
+// Bootstrap override
+.alert-dismissible {
+  padding-right: unset;
+  padding-inline-start: 1rem;
+  padding-inline-end: $alert-dismissible-padding-right;
+
+  .close {
+    position: absolute;
+    right: unset;
+    top: unset;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    padding: $alert-close-padding;
+    font-weight: $alert-dismissible-font-weight;
+    text-shadow: none;
+    opacity: 1;
+    &:focus {
+      outline-width: 3px;
+      outline-style: solid;
+      outline-color: inherit;
+      outline-offset: -0.75rem;
+    }
+  }
+}
+
+// Bootstrap override
+.alert-heading {
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-base;
+}
+
+// Custom classes
+.alert-icon {
+  margin-inline-end: $alert-icon-margin-right;
+}
+
+.alert-body {
+  display: flex;
+}
+
+.alert-content {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  font-size: $font-size-subtitle;
+}
+
+.alert-heading + .alert-description {
+  margin-block-start: $alert-description-margin-top;
+}

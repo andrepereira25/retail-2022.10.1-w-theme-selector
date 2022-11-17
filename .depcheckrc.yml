@@ -1,0 +1,8 @@
+ignores:
+  - '@nrwl/*'
+  - '@angular/*'
+  - '@angular-devkit/*'
+  - '@backbase/backbase-theme-retail-preset'
+skip-missing: true
+ignore-bin-packages: false
+json: true

@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/* Overriding some of ngx-chart classes for cumulative performance and valuation/variation charts */
+
+.bb-chart-series {
+  min-height: 100px;
+
+  .gridline-path {
+    stroke: $color-neutral-lightest;
+  }
+}

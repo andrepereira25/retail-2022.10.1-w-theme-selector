@@ -1,0 +1,31 @@
+.rbs-broadcast-modal {
+  padding: 2rem;
+  .modal-header {
+    padding: 0;
+  }
+}
+
+.rbs-broadcast-modal__header {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  .rbs-broadcast-modal__header--title {
+    text-align: center;
+  }
+}
+.rbs-broadcast-modal__message {
+  font-weight: $font-weight-regular;
+}
+
+.rbs-broadcast-modal__body-container {
+  overflow: auto;
+  word-break: break-word;
+}
+
+.rbs-broadcast-modal__body-container--inner {
+  overflow: visible;
+  ul, ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}

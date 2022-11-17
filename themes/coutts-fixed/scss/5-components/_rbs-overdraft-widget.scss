@@ -1,0 +1,60 @@
+@mixin buttonStyle() {
+  color: $rbs-color-neutral-darker !important;
+  text-transform: uppercase;
+  font-weight: $font-weight-light;
+}
+
+rbs-overdraft-widget {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: $font-weight-light !important;
+
+  h3 {
+    color: $rbs-default-grey-color;
+    margin: 40px 0 20px 0;
+  }
+
+  h4 {
+    text-transform: capitalize;
+    color: $rbs-color-neutral-darker;
+  }
+
+  .card {
+    box-shadow: $rbs-card-box-shadow;
+    padding: 2rem;
+    margin-top: 2rem;
+
+    button {
+      @include buttonStyle;
+    }
+  }
+
+  p {
+    color: $rbs-default-grey-color;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $rbs-default-grey-color;
+    margin-bottom: 30px;
+  }
+
+  .bb-button-bar {
+    margin-top: 20px;
+    flex-direction: row !important;
+  }
+}
+
+.overdraft-settings-modal {
+  h2 {
+    text-transform: capitalize;
+  }
+
+  button {
+    @include buttonStyle;
+  }
+
+  .modal-body {
+    font-weight: $font-weight-light;
+  }
+}

@@ -1,0 +1,111 @@
+// Import variables from default theme
+@import "~@backbase/ui-ang/scss/6-utilities/utilities";
+
+.border-b {
+  border-bottom: 1px solid #e9eaeb;
+}
+
+.white-space-pre {
+  white-space: pre-line;
+}
+
+.rbs-clickable {
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    background-color: $rbs-color-neutral-lighter;
+    .rbs-clickable-arrow {
+      bb-icon-ui {
+        transform: translate(-35%, -50%);
+      }
+    }
+  }
+  &.active {
+    background-color: #def5da;
+  }
+  .rbs-clickable-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    bb-icon-ui {
+      transition: transform 0.5s;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-60%, -50%);
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active),
+  screen and (-ms-high-contrast: none) {
+  .text-private {
+    color: transparent;
+    text-shadow: rgba(0, 0, 0, 1) 0px 0px 8px;
+  }
+}
+
+.text-private {
+  filter: blur(8px);
+  transition: 0.2s;
+}
+
+.text-public {
+  filter: unset;
+  transition: 0.2s;
+}
+
+.privacy-mode-wrapper {
+  &.absolute {
+    position: absolute;
+    top: 25%;
+    right: 0;
+  }
+
+  .privacy-mode {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    min-height: 40px;
+    padding: 0 0.875rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    text-align: end;
+    color: $rbs-color-neutral-darker;
+
+    &:hover {
+      color: $rbs-color-neutral-darker;
+      text-decoration: none;
+    }
+
+    &-label {
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      @media (max-width: $screen-s) {
+        display: none;
+      }
+    }
+    &-image {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-left: 0.5rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      background: url("../../assets/images/product-summary/visibilityOn.svg")
+        no-repeat;
+      &-off {
+        background: url("../../assets/images/product-summary/visibilityOff.svg")
+          no-repeat;
+      }
+    }
+  }
+}
