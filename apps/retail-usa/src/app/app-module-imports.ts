@@ -22,6 +22,7 @@ import { RoutableModalModule } from './routable-modal/routable-modal.module';
 import { UserContextModule } from './user-context/user-context.module';
 import remoteConfigProjectDetails from './remote-config/release-template/project.json';
 import packageJson from '../../../../package.json';
+import { ComponentsModule } from '@backbase/components';
 
 /**
  * Modules in this array are added to the `imports` array of the AppModule
@@ -49,4 +50,5 @@ export const appModuleImports = [
   }),
   RoutableModalModule,
   UserContextModule,
+  ComponentsModule
 ];

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="60px" viewBox="0 0 82 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Payments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iOS_Payments_Home" transform="translate(-49.000000, -112.000000)">
+            <g id="Group" transform="translate(52.500000, 112.000000)">
+                <circle id="Oval" fill="#22BD05" cx="40" cy="30" r="30"></circle>
+                <g id="Group-2" transform="translate(36.000000, 16.000000)" stroke="#F1F6FB" stroke-linecap="round" stroke-width="5">
+                    <line x1="1" y1="7" x2="19.5" y2="6.5" id="Line" transform="translate(10.500000, 7.000000) rotate(1.548158) translate(-10.500000, -7.000000) "></line>
+                    <line x1="13" y1="-1.81890614e-12" x2="19.5" y2="6.5" id="Line"></line>
+                    <line x1="13" y1="7" x2="19.5" y2="13.5" id="Line" transform="translate(16.250000, 10.250000) scale(1, -1) translate(-16.250000, -10.250000) "></line>
+                </g>
+                <g id="Group-3" transform="translate(33.500000, 38.000000) rotate(-180.000000) translate(-33.500000, -38.000000) translate(23.000000, 31.000000)" stroke="#F1F6FB" stroke-linecap="round" stroke-width="5">
+                    <line x1="1" y1="7" x2="19.5" y2="6.5" id="Line" transform="translate(10.500000, 7.000000) rotate(1.548158) translate(-10.500000, -7.000000) "></line>
+                    <line x1="13" y1="-1.81890614e-12" x2="19.5" y2="6.5" id="Line"></line>
+                    <line x1="13" y1="7" x2="19.5" y2="13.5" id="Line" transform="translate(16.250000, 10.250000) scale(1, -1) translate(-16.250000, -10.250000) "></line>
+                </g>
+                <line x1="20" y1="22.743337" x2="-1.66311409e-13" y2="22.743337" id="Path-3" stroke="#B3E4B1" stroke-width="5" stroke-linecap="round"></line>
+                <line x1="30" y1="22.743337" x2="27" y2="22.743337" id="Path-3" stroke="#B3E4B1" stroke-width="5" stroke-linecap="round"></line>
+                <line x1="54" y1="38.25" x2="49" y2="38.25" id="Path-3" stroke="#B3E4B1" stroke-width="5" stroke-linecap="round"></line>
+                <line x1="75" y1="38.25" x2="68" y2="38.25" id="Path-3" stroke="#B3E4B1" stroke-width="5" stroke-linecap="round"></line>
+                <line x1="61.5" y1="38.25" x2="61" y2="38.25" id="Path-3" stroke="#B3E4B1" stroke-width="5" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

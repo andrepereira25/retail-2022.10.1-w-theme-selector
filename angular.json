@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "components": "libs/components",
+    "font-loader": "libs/font-loader",
     "retail-assets": "libs/retail/assets",
     "retail-communication": "libs/retail/feature/communication",
     "retail-e2e": "libs/retail-e2e",

@@ -11,7 +11,6 @@ import { appModuleImports } from './app-module-imports';
 import { AppComponent } from './app.component';
 import { RetailAppRemoteConfig } from './remote-config/remote-config';
 import { APP_NOTIFICATIONS_BASE_PATH, ServicePathsModule } from './service-paths.module';
-import { ComponentsModule } from 'libs/components/src';
 
 export function applicationInitializer(remoteConfig: RemoteConfigService<RetailAppRemoteConfig>) {
   return () => remoteConfig.fetchAndActivate();
@@ -25,8 +24,7 @@ export function applicationInitializer(remoteConfig: RemoteConfigService<RetailA
     HttpClientXsrfModule,
     environment.animation ? BrowserAnimationsModule : NoopAnimationsModule,
     ServicePathsModule,
-    ...appModuleImports,
-    ComponentsModule
+    ...appModuleImports
   ],
   providers: [
     {

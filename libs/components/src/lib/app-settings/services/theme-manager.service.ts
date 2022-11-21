@@ -1,22 +1,7 @@
 import { DOCUMENT } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable, InjectionToken, Optional } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
-export interface Theme {
-  title: string, 
-  theme: string
-}
-
-export const THEMES = new InjectionToken<Theme[]>('THEMES');
-
-export type ElementTypes = HTMLLinkElement | HTMLElement;
-
-export interface ElementToAppend<T = ElementTypes> {
-  alreadyExists: boolean,
-  themeLink: T
-}
-
+import { Theme, THEMES, ElementToAppend } from '../models/theming';
 
 @Injectable({
   providedIn: 'root'
@@ -43,49 +28,35 @@ export class ThemeManagerService {
   constructor(
     @Inject(DOCUMENT) private document: Document, 
     @Inject(THEMES) themes: Theme[],
-    private http: HttpClient
   ) {
-    console.log(themes);
     this.themes = themes || [this.CustomTheme];
     this._selectedTheme$.next(themes && themes[0] || this.CustomTheme);
+    this.init();
    }
 
    loadPrebuiltTheme(themeName: string) {
-    this.document.querySelector('body').style.opacity = '0'
-    this.http.get(themeName, { responseType: 'arraybuffer'}).subscribe((r) => {
-      console.log(r)
-      this.document.querySelector('body').style.opacity = '1'
-    })
+    this.toggleBodyOpacity(false);
     const head = this.document.querySelector('head');
-    const stylingElement = this.getThemeStyleElement('prebuilt-theme', 'custom-theme', 'link') as ElementToAppend<HTMLLinkElement>;
-    stylingElement.themeLink.rel = 'stylesheet';
-    stylingElement.themeLink.href = themeName;
-    if (!stylingElement.alreadyExists) {
-      head?.appendChild(stylingElement.themeLink);
-    }
-   }
-
-
+    const stylingElement = this.getThemeStyleElement('prebuilt-theme', 'link') as ElementToAppend<HTMLLinkElement>;
+    stylingElement.rel = 'stylesheet';
+    stylingElement.href = themeName;
+    head?.appendChild(stylingElement);
+  }
+  
   onCustomThemeSelect(theme: string) {
+    this.toggleBodyOpacity(false);
     const head = this.document.querySelector('head');
-    const stylingElement = this.getThemeStyleElement('custom-theme', 'prebuilt-theme', 'style');
-    console.log(stylingElement);
-    stylingElement.themeLink.innerHTML = theme;
-    if (!stylingElement.alreadyExists) {
-      head?.appendChild(stylingElement.themeLink);
-    }
+    const stylingElement = this.getThemeStyleElement('custom-theme', 'style');
+    stylingElement.innerHTML = theme;
+    head?.appendChild(stylingElement);
   }
 
 
   setupCustomTemplateBase() {
-    // this.document.body.addEventListener('transitionend', function(){
-    //   console.log('done')
-    //  }, false);
     fetch('/custom.css').then((t) => {
       return t.body.getReader().read()
     })
     .then((t) => {
-      console.log(t)
       let theme = new TextDecoder().decode(t.value);
       this.customThemeBase = theme;
     });
@@ -99,20 +70,28 @@ export class ThemeManagerService {
     return this._selectedTheme$.asObservable();
   }
 
-  private getThemeStyleElement(id: string, toRemove: string, elType: string) {
-    let themeLink = this.document.getElementById(id);
-    this.document.getElementById(toRemove)?.remove();
-    if (themeLink) {
-      return ({
-        alreadyExists: true,
-        themeLink
-      });
-    }
+  private getThemeStyleElement(id: string, elType: string) {
+    this.document.getElementById('prebuilt-theme')?.setAttribute('id', 'to-remove');
+    this.document.getElementById('custom-theme')?.setAttribute('id', 'to-remove');
     const style = this.document.createElement(elType);
     style.id = id;
-    return ({
-      alreadyExists: false,
-      themeLink: style
-    })
+    return style;
+  }
+
+  private init() {
+    window.document.fonts.addEventListener('loadingdone', () => this.toggleBodyOpacity(true));
+    window.document.fonts.addEventListener('loadingerror', () => this.toggleBodyOpacity(true));
+  }
+  
+  private toggleBodyOpacity(toggle: boolean) {
+    const body = window.document.querySelector('body');
+    if (toggle) {
+      this.document.querySelectorAll('#to-remove')?.forEach(item => item.remove());
+    }
+    if (body) {
+      body.style.transition = 'ease-out .05s';
+      body.style.opacity = toggle ? '1' : '0';
+      body.style.filter = toggle ? 'blur(0) brightness(1)' : 'blur(20px) brightness(1.2)';
+    }
   }
 }

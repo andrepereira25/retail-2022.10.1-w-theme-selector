@@ -5,8 +5,8 @@ import { IconModule } from '@backbase/ui-ang/icon';
 import { InputRadioGroupModule } from '@backbase/ui-ang/input-radio-group';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ColorPickerComponent } from './app-settings/color-picker/color-picker.component';
-import { THEMES } from './app-settings/services/theme-manager.service';
 import { HttpClientModule } from '@angular/common/http';
+import { THEMES } from './app-settings/models/theming';
 
 @NgModule({
   imports: [CommonModule, IconModule, InputRadioGroupModule, ReactiveFormsModule, FormsModule, HttpClientModule],

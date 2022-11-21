@@ -1,16 +1,16 @@
-import { DOCUMENT, TitleCasePipe } from '@angular/common';
-import { Component, Inject, InjectionToken, OnDestroy, OnInit, Optional, ViewEncapsulation } from '@angular/core';
+import { TitleCasePipe } from '@angular/common';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { BehaviorSubject, of, Subject, takeUntil, tap } from 'rxjs';
+import { Subject, takeUntil, tap } from 'rxjs';
+import { ColorsToDisplay, ColorToDisplay, Theme } from './models/theming';
 import { ColoringService } from './services/coloring.service';
-import { Theme, ThemeManagerService, THEMES } from './services/theme-manager.service';
+import { ThemeManagerService } from './services/theme-manager.service';
 
 @Component({
   selector: 'bb-app-settings',
   templateUrl: './app-settings.component.html',
   styleUrls: ['./app-settings.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  providers: []
+  encapsulation: ViewEncapsulation.None
 })
 export class AppSettingsComponent implements OnInit, OnDestroy {
   
@@ -79,13 +79,12 @@ export class AppSettingsComponent implements OnInit, OnDestroy {
     this.themeManager.selectedTheme$
     .pipe(
       takeUntil(this.destroy$),
-      tap(item => item === this.CustomTheme ? this.onCustomThemeSelect(): this.loadTheme(item.theme))
+      tap(item => item === this.CustomTheme ? this.onCustomThemeSelect() : this.loadTheme(item.theme))
     )
     .subscribe()
   }
 
   private loadTheme(themeName: string) {
-    console.log(themeName)
     this.themeManager.loadPrebuiltTheme(themeName);
   }
 
@@ -97,19 +96,15 @@ export class AppSettingsComponent implements OnInit, OnDestroy {
 
   private onCustomThemeVariableUpdate() {
     this.coloringService.setDocumentColors(this.customThemeForm.value);
-    this.customThemeFormValues$.pipe(tap(variables => {
-      this.coloringService.setDocumentColors(variables);
-    })).subscribe();
+    this.customThemeFormValues$.pipe(
+      tap(variables => {
+        this.coloringService.setDocumentColors(variables);
+      })
+    ).subscribe();
   }
 
-
-  get formControlKeys(): { controlName: string, label: string }[] {
-    return Object.keys(this.customThemeForm.controls)
-            .map(item => ({
-              controlName: item,
-              label: this.titleCase.transform(item.split('-').join(' '))
-            }))
-            .filter(item => item.controlName.startsWith('neutral') || !(item.controlName.includes('lighter') || item.controlName.includes('lightest') || item.controlName.includes('darker') || item.controlName.includes('darkest')));
+  private excludeColorVariants(item: ColorToDisplay) {
+    return item.controlName.startsWith('neutral') || !(item.controlName.includes('lighter') || item.controlName.includes('lightest') || item.controlName.includes('darker') || item.controlName.includes('darkest'))
   }
 
   trackByControlName(item: { controlName: string, label: string }) {
@@ -119,6 +114,15 @@ export class AppSettingsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  get formControlKeys(): ColorsToDisplay {
+    return Object.keys(this.customThemeForm.controls)
+            .map(item => ({
+              controlName: item,
+              label: this.titleCase.transform(item.split('-').join(' '))
+            }))
+            .filter(this.excludeColorVariants);
   }
 
   get controls() {
